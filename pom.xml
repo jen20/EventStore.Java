@@ -19,12 +19,16 @@
             <artifactId>netty-all</artifactId>
             <version>4.0.28.Final</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     
     <build>
-
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -34,9 +38,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-
         </plugins>
-
     </build>
 
 </project>
