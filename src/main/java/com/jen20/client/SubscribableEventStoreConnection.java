@@ -13,9 +13,20 @@ public interface SubscribableEventStoreConnection {
                                                           LinkAction linkAction,
                                                           BiConsumer<Subscription, ResolvedEvent> onEvent,
                                                           BiConsumer<Subscription, DropReason> onDrop);
+    CompletableFuture<Subscription> subscribeToStreamLive(String streamName,
+                                                          LinkAction linkAction,
+                                                          Credentials credentials,
+                                                          BiConsumer<Subscription, ResolvedEvent> onEvent,
+                                                          BiConsumer<Subscription, DropReason> onDrop);
 
     CompletableFuture<Subscription> subscribeToStreamLive(String streamName,
                                                           LinkAction linkAction,
+                                                          BiConsumer<Subscription, ResolvedEvent> onEvent,
+                                                          BiConsumer<Subscription, DropReason> onDrop,
+                                                          Executor executor);
+    CompletableFuture<Subscription> subscribeToStreamLive(String streamName,
+                                                          LinkAction linkAction,
+                                                          Credentials credentials,
                                                           BiConsumer<Subscription, ResolvedEvent> onEvent,
                                                           BiConsumer<Subscription, DropReason> onDrop,
                                                           Executor executor);
@@ -23,8 +34,17 @@ public interface SubscribableEventStoreConnection {
     CompletableFuture<Subscription> subscribeToAllLive(LinkAction linkAction,
                                                        BiConsumer<Subscription, ResolvedEvent> onEvent,
                                                        BiConsumer<Subscription, DropReason> onDrop);
+    CompletableFuture<Subscription> subscribeToAllLive(LinkAction linkAction,
+                                                       Credentials credentials,
+                                                       BiConsumer<Subscription, ResolvedEvent> onEvent,
+                                                       BiConsumer<Subscription, DropReason> onDrop);
 
     CompletableFuture<Subscription> subscribeToAllLive(LinkAction linkAction,
+                                                       BiConsumer<Subscription, ResolvedEvent> onEvent,
+                                                       BiConsumer<Subscription, DropReason> onDrop,
+                                                       Executor executor);
+    CompletableFuture<Subscription> subscribeToAllLive(LinkAction linkAction,
+                                                       Credentials credentials,
                                                        BiConsumer<Subscription, ResolvedEvent> onEvent,
                                                        BiConsumer<Subscription, DropReason> onDrop,
                                                        Executor executor);
@@ -32,6 +52,13 @@ public interface SubscribableEventStoreConnection {
     CompletableFuture<Subscription> subscribeToStreamFromEventNumber(String stream,
                                                                      int eventNumber,
                                                                      LinkAction linkAction,
+                                                                     BiConsumer<Subscription, ResolvedEvent> onEvent,
+                                                                     BiConsumer<Subscription, DropReason> onDrop,
+                                                                     Consumer<Subscription> onLiveProcessingStart);
+    CompletableFuture<Subscription> subscribeToStreamFromEventNumber(String stream,
+                                                                     int eventNumber,
+                                                                     LinkAction linkAction,
+                                                                     Credentials credentials,
                                                                      BiConsumer<Subscription, ResolvedEvent> onEvent,
                                                                      BiConsumer<Subscription, DropReason> onDrop,
                                                                      Consumer<Subscription> onLiveProcessingStart);
@@ -43,15 +70,36 @@ public interface SubscribableEventStoreConnection {
                                                                      BiConsumer<Subscription, DropReason> onDrop,
                                                                      Consumer<Subscription> onLiveProcessingStart,
                                                                      Executor executor);
+    CompletableFuture<Subscription> subscribeToStreamFromEventNumber(String stream,
+                                                                     int eventNumber,
+                                                                     LinkAction linkAction,
+                                                                     Credentials credentials,
+                                                                     BiConsumer<Subscription, ResolvedEvent> onEvent,
+                                                                     BiConsumer<Subscription, DropReason> onDrop,
+                                                                     Consumer<Subscription> onLiveProcessingStart,
+                                                                     Executor executor);
 
     CompletableFuture<Subscription> subscribeToAllFromPosition(Position position,
                                                                LinkAction linkAction,
                                                                BiConsumer<Subscription, ResolvedEvent> onEvent,
                                                                BiConsumer<Subscription, DropReason> onDrop,
                                                                Consumer<Subscription> onLiveProcessingStart);
+    CompletableFuture<Subscription> subscribeToAllFromPosition(Position position,
+                                                               LinkAction linkAction,
+                                                               Credentials credentials,
+                                                               BiConsumer<Subscription, ResolvedEvent> onEvent,
+                                                               BiConsumer<Subscription, DropReason> onDrop,
+                                                               Consumer<Subscription> onLiveProcessingStart);
 
     CompletableFuture<Subscription> subscribeToAllFromPosition(Position position,
                                                                LinkAction linkAction,
+                                                               BiConsumer<Subscription, ResolvedEvent> onEvent,
+                                                               BiConsumer<Subscription, DropReason> onDrop,
+                                                               Consumer<Subscription> onLiveProcessingStart,
+                                                               Executor executor);
+    CompletableFuture<Subscription> subscribeToAllFromPosition(Position position,
+                                                               LinkAction linkAction,
+                                                               Credentials credentials,
                                                                BiConsumer<Subscription, ResolvedEvent> onEvent,
                                                                BiConsumer<Subscription, DropReason> onDrop,
                                                                Consumer<Subscription> onLiveProcessingStart,
