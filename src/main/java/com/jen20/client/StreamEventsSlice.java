@@ -8,11 +8,11 @@ public class StreamEventsSlice {
     private final int fromEventNumber;
     private final int nextEventNumber;
     private final int lastEventNumber;
-    private final Boolean isEndOfStream;
+    private final boolean isEndOfStream;
     private final ReadDirection readDirection;
     private final List<ResolvedEvent> events;
 
-    public StreamEventsSlice(SliceReadStatus status, String streamName, int fromEventNumber, int nextEventNumber, int lastEventNumber, Boolean isEndOfStream, ReadDirection readDirection, List<ResolvedEvent> events) {
+    public StreamEventsSlice(SliceReadStatus status, String streamName, int fromEventNumber, int nextEventNumber, int lastEventNumber, boolean isEndOfStream, ReadDirection readDirection, List<ResolvedEvent> events) {
         this.status = status;
         this.streamName = streamName;
         this.fromEventNumber = fromEventNumber;
@@ -39,7 +39,7 @@ public class StreamEventsSlice {
         return lastEventNumber;
     }
 
-    public Boolean isEndOfStream() {
+    public boolean isEndOfStream() {
         return isEndOfStream;
     }
 
