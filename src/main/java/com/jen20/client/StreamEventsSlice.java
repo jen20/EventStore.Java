@@ -1,5 +1,7 @@
 package com.jen20.client;
 
+import java.util.List;
+
 public class StreamEventsSlice {
     private final SliceReadStatus status;
     private final String streamName;
@@ -8,8 +10,9 @@ public class StreamEventsSlice {
     private final int lastEventNumber;
     private final Boolean isEndOfStream;
     private final ReadDirection readDirection;
+    private final List<ResolvedEvent> events;
 
-    public StreamEventsSlice(SliceReadStatus status, String streamName, int fromEventNumber, int nextEventNumber, int lastEventNumber, Boolean isEndOfStream, ReadDirection readDirection) {
+    public StreamEventsSlice(SliceReadStatus status, String streamName, int fromEventNumber, int nextEventNumber, int lastEventNumber, Boolean isEndOfStream, ReadDirection readDirection, List<ResolvedEvent> events) {
         this.status = status;
         this.streamName = streamName;
         this.fromEventNumber = fromEventNumber;
@@ -17,6 +20,7 @@ public class StreamEventsSlice {
         this.lastEventNumber = lastEventNumber;
         this.isEndOfStream = isEndOfStream;
         this.readDirection = readDirection;
+        this.events = events;
     }
 
     public String getStreamName() {
@@ -44,7 +48,10 @@ public class StreamEventsSlice {
     }
 
     public SliceReadStatus getStatus() {
-
         return status;
+    }
+
+    public List<ResolvedEvent> getEvents() {
+        return events;
     }
 }
