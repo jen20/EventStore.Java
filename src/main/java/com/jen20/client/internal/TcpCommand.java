@@ -1,5 +1,8 @@
 package com.jen20.client.internal;
 
+import java.util.HashMap;
+import java.util.Map;
+
 enum TcpCommand {
     HEARTBEAT_REQUEST((byte)0x01),
     HEARTBEAT_RESPONSE((byte)0x02),
@@ -57,10 +60,6 @@ enum TcpCommand {
 
     TcpCommand(byte value) {
         this.value = value;
-    }
-
-    public static TcpCommand fromByte(byte value) {
-        return TcpCommand.values()[value];
     }
 }
 

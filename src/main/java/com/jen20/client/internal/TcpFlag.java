@@ -10,7 +10,7 @@ enum TcpFlag {
         this.value = value;
     }
 
-    public static TcpFlag fromByte(byte value) {
+    public static TcpFlag fromUnsignedByte(byte value) {
         return TcpFlag.values()[value];
     }
 }
