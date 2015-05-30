@@ -13,10 +13,10 @@ public interface EventStoreConnection {
 
     CompletableFuture<DeleteResult> deleteStream(String streamName, int expectedVersion);
 
-    CompletableFuture<StreamEventsSlice> readEventsForward(String streamName, int start, int count, Boolean resolveLinks);
-    CompletableFuture<StreamEventsSlice> readEventsBackward(String streamName, int start, int count, Boolean resolveLinks);
+    CompletableFuture<StreamEventsSlice> readEventsForward(String streamName, int start, int count, LinkAction resolveLinks);
+    CompletableFuture<StreamEventsSlice> readEventsBackward(String streamName, int start, int count, LinkAction resolveLinks);
 
-    CompletableFuture<SingleReadResult> readEvent(String streamName, int eventNumber, Boolean resolveLinks);
+    CompletableFuture<SingleReadResult> readEvent(String streamName, int eventNumber, LinkAction resolveLinks);
 
     CompletableFuture<Subscription> subscribeToStreamLive(String streamName,
                                                           LinkAction linkAction,
