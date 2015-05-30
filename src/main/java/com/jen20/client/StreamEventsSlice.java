@@ -1,4 +1,4 @@
-package com.geteventstore.client;
+package com.jen20.client;
 
 public class StreamEventsSlice {
     private final SliceReadStatus status;

@@ -1,4 +1,4 @@
-package com.geteventstore.client;
+package com.jen20.client;
 
 /**
  * Enumation of possible reasons for an Event Store Subscription to be dropped.

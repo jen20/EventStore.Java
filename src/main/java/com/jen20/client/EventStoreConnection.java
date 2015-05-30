@@ -1,4 +1,4 @@
-package com.geteventstore.client;
+package com.jen20.client;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;

@@ -1,4 +1,4 @@
-package com.geteventstore.client;
+package com.jen20.client;
 
 public class WriteResult {
     public final int nextExpectedVersion;

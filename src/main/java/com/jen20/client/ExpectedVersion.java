@@ -1,4 +1,4 @@
-package com.geteventstore.client;
+package com.jen20.client;
 
 public class ExpectedVersion {
     public final int NoStream = -1;
