@@ -1,5 +1,6 @@
 package com.jen20.client;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import java.util.function.BiConsumer;
@@ -9,7 +10,8 @@ public interface EventStoreConnection {
     CompletableFuture connect();
     void close();
 
-    CompletableFuture<WriteResult> appendToStream(String streamName, int expectedVersion, EventData[] events);
+    CompletableFuture<WriteResult> appendToStream(String streamName, int expectedVersion, EventData... events);
+    CompletableFuture<WriteResult> appendToStream(String streamName, int expectedVersion, List<EventData> events);
 
     CompletableFuture<DeleteResult> deleteStream(String streamName, int expectedVersion);
 
