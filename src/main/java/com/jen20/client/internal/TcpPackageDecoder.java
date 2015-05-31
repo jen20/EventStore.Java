@@ -41,10 +41,10 @@ class TcpPackageDecoder extends ReplayingDecoder<Void> {
                     + passwordLength;   // actual length of the password
         }
 
-        ByteBuf dataSlice = byteBuf.slice(headerLength, byteBuf.capacity() - headerLength).retain();
+        ByteBuf dataSlice = byteBuf.slice(headerLength, byteBuf.writerIndex() - headerLength).retain();
 
         list.add(new TcpPackage(command, flags, correlationId, username, password, dataSlice));
-        byteBuf.readerIndex(byteBuf.capacity());
+        byteBuf.readerIndex(byteBuf.writerIndex());
     }
 }
 

@@ -11,8 +11,8 @@ public class TcpPackageEquality {
         if (expected.Login != null ? !expected.Login.equals(actual.Login) : actual.Login != null) return false;
         if (!Arrays.equals(expected.Password, actual.Password)) return false;
 
-        int expectedDataLength = expected.Data.capacity() - expected.Data.arrayOffset();
-        int actualDataLength = actual.Data.capacity() - actual.Data.arrayOffset();
+        int expectedDataLength = expected.Data.writerIndex();
+        int actualDataLength = actual.Data.writerIndex();
 
         if (expectedDataLength != actualDataLength) return false;
 

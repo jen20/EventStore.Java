@@ -27,4 +27,12 @@ public class TestDataResources {
     public static ByteBuf singleLengthPrefixedTcpPackage() {
         return resourceAsByteBuf("/singleLengthPrefixedTcpPackage");
     }
+
+    public static ByteBuf lastSingleLengthFramedTcpPackage() {
+        return resourceAsByteBuf("/lastSingleLengthFramedTcpPackage");
+    }
+
+    public static ByteBuf completeTcpFrameMultipleTcpPackage() {
+        return resourceAsByteBuf("/completeTcpFrameMultipleTcpPackage");
+    }
 }
