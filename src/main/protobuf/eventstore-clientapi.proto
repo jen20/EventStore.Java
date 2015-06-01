@@ -1,5 +1,9 @@
 package EventStore.Client.Messages;
 
+/* This proto matches the oss-v3.0.4 branch of Event Store Server,
+   with the addition of the options below for Java package and umbrella
+   class name. */
+
 option java_package = "com.jen20.client.internal";
 option java_outer_classname = "ClientMessage";
 
