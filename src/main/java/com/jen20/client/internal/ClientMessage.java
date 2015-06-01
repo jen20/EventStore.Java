@@ -551,6 +551,88 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.NewEvent)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.NewEvent other = (com.jen20.client.internal.ClientMessage.NewEvent) obj;
+
+      boolean result = true;
+      result = result && (hasEventId() == other.hasEventId());
+      if (hasEventId()) {
+        result = result && getEventId()
+            .equals(other.getEventId());
+      }
+      result = result && (hasEventType() == other.hasEventType());
+      if (hasEventType()) {
+        result = result && getEventType()
+            .equals(other.getEventType());
+      }
+      result = result && (hasDataContentType() == other.hasDataContentType());
+      if (hasDataContentType()) {
+        result = result && (getDataContentType()
+            == other.getDataContentType());
+      }
+      result = result && (hasMetadataContentType() == other.hasMetadataContentType());
+      if (hasMetadataContentType()) {
+        result = result && (getMetadataContentType()
+            == other.getMetadataContentType());
+      }
+      result = result && (hasData() == other.hasData());
+      if (hasData()) {
+        result = result && getData()
+            .equals(other.getData());
+      }
+      result = result && (hasMetadata() == other.hasMetadata());
+      if (hasMetadata()) {
+        result = result && getMetadata()
+            .equals(other.getMetadata());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEventId()) {
+        hash = (37 * hash) + EVENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getEventId().hashCode();
+      }
+      if (hasEventType()) {
+        hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getEventType().hashCode();
+      }
+      if (hasDataContentType()) {
+        hash = (37 * hash) + DATA_CONTENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getDataContentType();
+      }
+      if (hasMetadataContentType()) {
+        hash = (37 * hash) + METADATA_CONTENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadataContentType();
+      }
+      if (hasData()) {
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getData().hashCode();
+      }
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.NewEvent parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1655,6 +1737,126 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.EventRecord)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.EventRecord other = (com.jen20.client.internal.ClientMessage.EventRecord) obj;
+
+      boolean result = true;
+      result = result && (hasEventStreamId() == other.hasEventStreamId());
+      if (hasEventStreamId()) {
+        result = result && getEventStreamId()
+            .equals(other.getEventStreamId());
+      }
+      result = result && (hasEventNumber() == other.hasEventNumber());
+      if (hasEventNumber()) {
+        result = result && (getEventNumber()
+            == other.getEventNumber());
+      }
+      result = result && (hasEventId() == other.hasEventId());
+      if (hasEventId()) {
+        result = result && getEventId()
+            .equals(other.getEventId());
+      }
+      result = result && (hasEventType() == other.hasEventType());
+      if (hasEventType()) {
+        result = result && getEventType()
+            .equals(other.getEventType());
+      }
+      result = result && (hasDataContentType() == other.hasDataContentType());
+      if (hasDataContentType()) {
+        result = result && (getDataContentType()
+            == other.getDataContentType());
+      }
+      result = result && (hasMetadataContentType() == other.hasMetadataContentType());
+      if (hasMetadataContentType()) {
+        result = result && (getMetadataContentType()
+            == other.getMetadataContentType());
+      }
+      result = result && (hasData() == other.hasData());
+      if (hasData()) {
+        result = result && getData()
+            .equals(other.getData());
+      }
+      result = result && (hasMetadata() == other.hasMetadata());
+      if (hasMetadata()) {
+        result = result && getMetadata()
+            .equals(other.getMetadata());
+      }
+      result = result && (hasCreated() == other.hasCreated());
+      if (hasCreated()) {
+        result = result && (getCreated()
+            == other.getCreated());
+      }
+      result = result && (hasCreatedEpoch() == other.hasCreatedEpoch());
+      if (hasCreatedEpoch()) {
+        result = result && (getCreatedEpoch()
+            == other.getCreatedEpoch());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEventStreamId()) {
+        hash = (37 * hash) + EVENT_STREAM_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getEventStreamId().hashCode();
+      }
+      if (hasEventNumber()) {
+        hash = (37 * hash) + EVENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getEventNumber();
+      }
+      if (hasEventId()) {
+        hash = (37 * hash) + EVENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getEventId().hashCode();
+      }
+      if (hasEventType()) {
+        hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getEventType().hashCode();
+      }
+      if (hasDataContentType()) {
+        hash = (37 * hash) + DATA_CONTENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getDataContentType();
+      }
+      if (hasMetadataContentType()) {
+        hash = (37 * hash) + METADATA_CONTENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadataContentType();
+      }
+      if (hasData()) {
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getData().hashCode();
+      }
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      if (hasCreated()) {
+        hash = (37 * hash) + CREATED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCreated());
+      }
+      if (hasCreatedEpoch()) {
+        hash = (37 * hash) + CREATED_EPOCH_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCreatedEpoch());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.EventRecord parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2637,6 +2839,52 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.ResolvedIndexedEvent)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.ResolvedIndexedEvent other = (com.jen20.client.internal.ClientMessage.ResolvedIndexedEvent) obj;
+
+      boolean result = true;
+      result = result && (hasEvent() == other.hasEvent());
+      if (hasEvent()) {
+        result = result && getEvent()
+            .equals(other.getEvent());
+      }
+      result = result && (hasLink() == other.hasLink());
+      if (hasLink()) {
+        result = result && getLink()
+            .equals(other.getLink());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEvent()) {
+        hash = (37 * hash) + EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEvent().hashCode();
+      }
+      if (hasLink()) {
+        hash = (37 * hash) + LINK_FIELD_NUMBER;
+        hash = (53 * hash) + getLink().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.ResolvedIndexedEvent parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3442,6 +3690,72 @@ public final class ClientMessage {
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.ResolvedEvent)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.ResolvedEvent other = (com.jen20.client.internal.ClientMessage.ResolvedEvent) obj;
+
+      boolean result = true;
+      result = result && (hasEvent() == other.hasEvent());
+      if (hasEvent()) {
+        result = result && getEvent()
+            .equals(other.getEvent());
+      }
+      result = result && (hasLink() == other.hasLink());
+      if (hasLink()) {
+        result = result && getLink()
+            .equals(other.getLink());
+      }
+      result = result && (hasCommitPosition() == other.hasCommitPosition());
+      if (hasCommitPosition()) {
+        result = result && (getCommitPosition()
+            == other.getCommitPosition());
+      }
+      result = result && (hasPreparePosition() == other.hasPreparePosition());
+      if (hasPreparePosition()) {
+        result = result && (getPreparePosition()
+            == other.getPreparePosition());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEvent()) {
+        hash = (37 * hash) + EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEvent().hashCode();
+      }
+      if (hasLink()) {
+        hash = (37 * hash) + LINK_FIELD_NUMBER;
+        hash = (53 * hash) + getLink().hashCode();
+      }
+      if (hasCommitPosition()) {
+        hash = (37 * hash) + COMMIT_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCommitPosition());
+      }
+      if (hasPreparePosition()) {
+        hash = (37 * hash) + PREPARE_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPreparePosition());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.jen20.client.internal.ClientMessage.ResolvedEvent parseFrom(
@@ -4373,6 +4687,68 @@ public final class ClientMessage {
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.WriteEvents)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.WriteEvents other = (com.jen20.client.internal.ClientMessage.WriteEvents) obj;
+
+      boolean result = true;
+      result = result && (hasEventStreamId() == other.hasEventStreamId());
+      if (hasEventStreamId()) {
+        result = result && getEventStreamId()
+            .equals(other.getEventStreamId());
+      }
+      result = result && (hasExpectedVersion() == other.hasExpectedVersion());
+      if (hasExpectedVersion()) {
+        result = result && (getExpectedVersion()
+            == other.getExpectedVersion());
+      }
+      result = result && getEventsList()
+          .equals(other.getEventsList());
+      result = result && (hasRequireMaster() == other.hasRequireMaster());
+      if (hasRequireMaster()) {
+        result = result && (getRequireMaster()
+            == other.getRequireMaster());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEventStreamId()) {
+        hash = (37 * hash) + EVENT_STREAM_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getEventStreamId().hashCode();
+      }
+      if (hasExpectedVersion()) {
+        hash = (37 * hash) + EXPECTED_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getExpectedVersion();
+      }
+      if (getEventsCount() > 0) {
+        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventsList().hashCode();
+      }
+      if (hasRequireMaster()) {
+        hash = (37 * hash) + REQUIRE_MASTER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getRequireMaster());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.jen20.client.internal.ClientMessage.WriteEvents parseFrom(
@@ -5436,6 +5812,91 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.WriteEventsCompleted)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.WriteEventsCompleted other = (com.jen20.client.internal.ClientMessage.WriteEventsCompleted) obj;
+
+      boolean result = true;
+      result = result && (hasResult() == other.hasResult());
+      if (hasResult()) {
+        result = result &&
+            (getResult() == other.getResult());
+      }
+      result = result && (hasMessage() == other.hasMessage());
+      if (hasMessage()) {
+        result = result && getMessage()
+            .equals(other.getMessage());
+      }
+      result = result && (hasFirstEventNumber() == other.hasFirstEventNumber());
+      if (hasFirstEventNumber()) {
+        result = result && (getFirstEventNumber()
+            == other.getFirstEventNumber());
+      }
+      result = result && (hasLastEventNumber() == other.hasLastEventNumber());
+      if (hasLastEventNumber()) {
+        result = result && (getLastEventNumber()
+            == other.getLastEventNumber());
+      }
+      result = result && (hasPreparePosition() == other.hasPreparePosition());
+      if (hasPreparePosition()) {
+        result = result && (getPreparePosition()
+            == other.getPreparePosition());
+      }
+      result = result && (hasCommitPosition() == other.hasCommitPosition());
+      if (hasCommitPosition()) {
+        result = result && (getCommitPosition()
+            == other.getCommitPosition());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashEnum(
+            getResult());
+      }
+      if (hasMessage()) {
+        hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getMessage().hashCode();
+      }
+      if (hasFirstEventNumber()) {
+        hash = (37 * hash) + FIRST_EVENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getFirstEventNumber();
+      }
+      if (hasLastEventNumber()) {
+        hash = (37 * hash) + LAST_EVENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getLastEventNumber();
+      }
+      if (hasPreparePosition()) {
+        hash = (37 * hash) + PREPARE_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPreparePosition());
+      }
+      if (hasCommitPosition()) {
+        hash = (37 * hash) + COMMIT_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCommitPosition());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.WriteEventsCompleted parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6255,6 +6716,72 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.DeleteStream)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.DeleteStream other = (com.jen20.client.internal.ClientMessage.DeleteStream) obj;
+
+      boolean result = true;
+      result = result && (hasEventStreamId() == other.hasEventStreamId());
+      if (hasEventStreamId()) {
+        result = result && getEventStreamId()
+            .equals(other.getEventStreamId());
+      }
+      result = result && (hasExpectedVersion() == other.hasExpectedVersion());
+      if (hasExpectedVersion()) {
+        result = result && (getExpectedVersion()
+            == other.getExpectedVersion());
+      }
+      result = result && (hasRequireMaster() == other.hasRequireMaster());
+      if (hasRequireMaster()) {
+        result = result && (getRequireMaster()
+            == other.getRequireMaster());
+      }
+      result = result && (hasHardDelete() == other.hasHardDelete());
+      if (hasHardDelete()) {
+        result = result && (getHardDelete()
+            == other.getHardDelete());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEventStreamId()) {
+        hash = (37 * hash) + EVENT_STREAM_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getEventStreamId().hashCode();
+      }
+      if (hasExpectedVersion()) {
+        hash = (37 * hash) + EXPECTED_VERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getExpectedVersion();
+      }
+      if (hasRequireMaster()) {
+        hash = (37 * hash) + REQUIRE_MASTER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getRequireMaster());
+      }
+      if (hasHardDelete()) {
+        hash = (37 * hash) + HARD_DELETE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHardDelete());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.DeleteStream parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6987,6 +7514,73 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.DeleteStreamCompleted)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.DeleteStreamCompleted other = (com.jen20.client.internal.ClientMessage.DeleteStreamCompleted) obj;
+
+      boolean result = true;
+      result = result && (hasResult() == other.hasResult());
+      if (hasResult()) {
+        result = result &&
+            (getResult() == other.getResult());
+      }
+      result = result && (hasMessage() == other.hasMessage());
+      if (hasMessage()) {
+        result = result && getMessage()
+            .equals(other.getMessage());
+      }
+      result = result && (hasPreparePosition() == other.hasPreparePosition());
+      if (hasPreparePosition()) {
+        result = result && (getPreparePosition()
+            == other.getPreparePosition());
+      }
+      result = result && (hasCommitPosition() == other.hasCommitPosition());
+      if (hasCommitPosition()) {
+        result = result && (getCommitPosition()
+            == other.getCommitPosition());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashEnum(
+            getResult());
+      }
+      if (hasMessage()) {
+        hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getMessage().hashCode();
+      }
+      if (hasPreparePosition()) {
+        hash = (37 * hash) + PREPARE_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPreparePosition());
+      }
+      if (hasCommitPosition()) {
+        hash = (37 * hash) + COMMIT_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCommitPosition());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.DeleteStreamCompleted parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -7391,4315 +7985,6 @@ public final class ClientMessage {
     // @@protoc_insertion_point(class_scope:EventStore.Client.Messages.DeleteStreamCompleted)
   }
 
-  public interface TransactionStartOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EventStore.Client.Messages.TransactionStart)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required string event_stream_id = 1;</code>
-     */
-    boolean hasEventStreamId();
-    /**
-     * <code>required string event_stream_id = 1;</code>
-     */
-    java.lang.String getEventStreamId();
-    /**
-     * <code>required string event_stream_id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getEventStreamIdBytes();
-
-    /**
-     * <code>required int32 expected_version = 2;</code>
-     */
-    boolean hasExpectedVersion();
-    /**
-     * <code>required int32 expected_version = 2;</code>
-     */
-    int getExpectedVersion();
-
-    /**
-     * <code>required bool require_master = 3;</code>
-     */
-    boolean hasRequireMaster();
-    /**
-     * <code>required bool require_master = 3;</code>
-     */
-    boolean getRequireMaster();
-  }
-  /**
-   * Protobuf type {@code EventStore.Client.Messages.TransactionStart}
-   */
-  public static final class TransactionStart extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:EventStore.Client.Messages.TransactionStart)
-      TransactionStartOrBuilder {
-    // Use TransactionStart.newBuilder() to construct.
-    private TransactionStart(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private TransactionStart(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final TransactionStart defaultInstance;
-    public static TransactionStart getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public TransactionStart getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TransactionStart(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              eventStreamId_ = bs;
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              expectedVersion_ = input.readInt32();
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              requireMaster_ = input.readBool();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionStart_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionStart_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.jen20.client.internal.ClientMessage.TransactionStart.class, com.jen20.client.internal.ClientMessage.TransactionStart.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<TransactionStart> PARSER =
-        new com.google.protobuf.AbstractParser<TransactionStart>() {
-      public TransactionStart parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TransactionStart(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TransactionStart> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int EVENT_STREAM_ID_FIELD_NUMBER = 1;
-    private java.lang.Object eventStreamId_;
-    /**
-     * <code>required string event_stream_id = 1;</code>
-     */
-    public boolean hasEventStreamId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required string event_stream_id = 1;</code>
-     */
-    public java.lang.String getEventStreamId() {
-      java.lang.Object ref = eventStreamId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          eventStreamId_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string event_stream_id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getEventStreamIdBytes() {
-      java.lang.Object ref = eventStreamId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        eventStreamId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int EXPECTED_VERSION_FIELD_NUMBER = 2;
-    private int expectedVersion_;
-    /**
-     * <code>required int32 expected_version = 2;</code>
-     */
-    public boolean hasExpectedVersion() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required int32 expected_version = 2;</code>
-     */
-    public int getExpectedVersion() {
-      return expectedVersion_;
-    }
-
-    public static final int REQUIRE_MASTER_FIELD_NUMBER = 3;
-    private boolean requireMaster_;
-    /**
-     * <code>required bool require_master = 3;</code>
-     */
-    public boolean hasRequireMaster() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required bool require_master = 3;</code>
-     */
-    public boolean getRequireMaster() {
-      return requireMaster_;
-    }
-
-    private void initFields() {
-      eventStreamId_ = "";
-      expectedVersion_ = 0;
-      requireMaster_ = false;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasEventStreamId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasExpectedVersion()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasRequireMaster()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getEventStreamIdBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(2, expectedVersion_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBool(3, requireMaster_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getEventStreamIdBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, expectedVersion_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, requireMaster_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.jen20.client.internal.ClientMessage.TransactionStart parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStart parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStart parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStart parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStart parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStart parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStart parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStart parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStart parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStart parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.jen20.client.internal.ClientMessage.TransactionStart prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code EventStore.Client.Messages.TransactionStart}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EventStore.Client.Messages.TransactionStart)
-        com.jen20.client.internal.ClientMessage.TransactionStartOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionStart_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionStart_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.jen20.client.internal.ClientMessage.TransactionStart.class, com.jen20.client.internal.ClientMessage.TransactionStart.Builder.class);
-      }
-
-      // Construct using com.jen20.client.internal.ClientMessage.TransactionStart.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        eventStreamId_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        expectedVersion_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        requireMaster_ = false;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionStart_descriptor;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionStart getDefaultInstanceForType() {
-        return com.jen20.client.internal.ClientMessage.TransactionStart.getDefaultInstance();
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionStart build() {
-        com.jen20.client.internal.ClientMessage.TransactionStart result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionStart buildPartial() {
-        com.jen20.client.internal.ClientMessage.TransactionStart result = new com.jen20.client.internal.ClientMessage.TransactionStart(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.eventStreamId_ = eventStreamId_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.expectedVersion_ = expectedVersion_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.requireMaster_ = requireMaster_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.jen20.client.internal.ClientMessage.TransactionStart) {
-          return mergeFrom((com.jen20.client.internal.ClientMessage.TransactionStart)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.jen20.client.internal.ClientMessage.TransactionStart other) {
-        if (other == com.jen20.client.internal.ClientMessage.TransactionStart.getDefaultInstance()) return this;
-        if (other.hasEventStreamId()) {
-          bitField0_ |= 0x00000001;
-          eventStreamId_ = other.eventStreamId_;
-          onChanged();
-        }
-        if (other.hasExpectedVersion()) {
-          setExpectedVersion(other.getExpectedVersion());
-        }
-        if (other.hasRequireMaster()) {
-          setRequireMaster(other.getRequireMaster());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasEventStreamId()) {
-          
-          return false;
-        }
-        if (!hasExpectedVersion()) {
-          
-          return false;
-        }
-        if (!hasRequireMaster()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.jen20.client.internal.ClientMessage.TransactionStart parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.jen20.client.internal.ClientMessage.TransactionStart) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object eventStreamId_ = "";
-      /**
-       * <code>required string event_stream_id = 1;</code>
-       */
-      public boolean hasEventStreamId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required string event_stream_id = 1;</code>
-       */
-      public java.lang.String getEventStreamId() {
-        java.lang.Object ref = eventStreamId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            eventStreamId_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>required string event_stream_id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getEventStreamIdBytes() {
-        java.lang.Object ref = eventStreamId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          eventStreamId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string event_stream_id = 1;</code>
-       */
-      public Builder setEventStreamId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        eventStreamId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string event_stream_id = 1;</code>
-       */
-      public Builder clearEventStreamId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        eventStreamId_ = getDefaultInstance().getEventStreamId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string event_stream_id = 1;</code>
-       */
-      public Builder setEventStreamIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        eventStreamId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int expectedVersion_ ;
-      /**
-       * <code>required int32 expected_version = 2;</code>
-       */
-      public boolean hasExpectedVersion() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required int32 expected_version = 2;</code>
-       */
-      public int getExpectedVersion() {
-        return expectedVersion_;
-      }
-      /**
-       * <code>required int32 expected_version = 2;</code>
-       */
-      public Builder setExpectedVersion(int value) {
-        bitField0_ |= 0x00000002;
-        expectedVersion_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 expected_version = 2;</code>
-       */
-      public Builder clearExpectedVersion() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        expectedVersion_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean requireMaster_ ;
-      /**
-       * <code>required bool require_master = 3;</code>
-       */
-      public boolean hasRequireMaster() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required bool require_master = 3;</code>
-       */
-      public boolean getRequireMaster() {
-        return requireMaster_;
-      }
-      /**
-       * <code>required bool require_master = 3;</code>
-       */
-      public Builder setRequireMaster(boolean value) {
-        bitField0_ |= 0x00000004;
-        requireMaster_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required bool require_master = 3;</code>
-       */
-      public Builder clearRequireMaster() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        requireMaster_ = false;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:EventStore.Client.Messages.TransactionStart)
-    }
-
-    static {
-      defaultInstance = new TransactionStart(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:EventStore.Client.Messages.TransactionStart)
-  }
-
-  public interface TransactionStartCompletedOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EventStore.Client.Messages.TransactionStartCompleted)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    boolean hasTransactionId();
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    long getTransactionId();
-
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    boolean hasResult();
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    com.jen20.client.internal.ClientMessage.OperationResult getResult();
-
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    boolean hasMessage();
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    java.lang.String getMessage();
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getMessageBytes();
-  }
-  /**
-   * Protobuf type {@code EventStore.Client.Messages.TransactionStartCompleted}
-   */
-  public static final class TransactionStartCompleted extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:EventStore.Client.Messages.TransactionStartCompleted)
-      TransactionStartCompletedOrBuilder {
-    // Use TransactionStartCompleted.newBuilder() to construct.
-    private TransactionStartCompleted(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private TransactionStartCompleted(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final TransactionStartCompleted defaultInstance;
-    public static TransactionStartCompleted getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public TransactionStartCompleted getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TransactionStartCompleted(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              transactionId_ = input.readInt64();
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-              com.jen20.client.internal.ClientMessage.OperationResult value = com.jen20.client.internal.ClientMessage.OperationResult.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(2, rawValue);
-              } else {
-                bitField0_ |= 0x00000002;
-                result_ = value;
-              }
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              message_ = bs;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionStartCompleted_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionStartCompleted_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.jen20.client.internal.ClientMessage.TransactionStartCompleted.class, com.jen20.client.internal.ClientMessage.TransactionStartCompleted.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<TransactionStartCompleted> PARSER =
-        new com.google.protobuf.AbstractParser<TransactionStartCompleted>() {
-      public TransactionStartCompleted parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TransactionStartCompleted(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TransactionStartCompleted> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int TRANSACTION_ID_FIELD_NUMBER = 1;
-    private long transactionId_;
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    public boolean hasTransactionId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    public long getTransactionId() {
-      return transactionId_;
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 2;
-    private com.jen20.client.internal.ClientMessage.OperationResult result_;
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    public boolean hasResult() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    public com.jen20.client.internal.ClientMessage.OperationResult getResult() {
-      return result_;
-    }
-
-    public static final int MESSAGE_FIELD_NUMBER = 3;
-    private java.lang.Object message_;
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    public boolean hasMessage() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          message_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getMessageBytes() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        message_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private void initFields() {
-      transactionId_ = 0L;
-      result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-      message_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasTransactionId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasResult()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt64(1, transactionId_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeEnum(2, result_.getNumber());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getMessageBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, transactionId_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, result_.getNumber());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getMessageBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.jen20.client.internal.ClientMessage.TransactionStartCompleted parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStartCompleted parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStartCompleted parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStartCompleted parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStartCompleted parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStartCompleted parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStartCompleted parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStartCompleted parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStartCompleted parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionStartCompleted parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.jen20.client.internal.ClientMessage.TransactionStartCompleted prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code EventStore.Client.Messages.TransactionStartCompleted}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EventStore.Client.Messages.TransactionStartCompleted)
-        com.jen20.client.internal.ClientMessage.TransactionStartCompletedOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionStartCompleted_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionStartCompleted_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.jen20.client.internal.ClientMessage.TransactionStartCompleted.class, com.jen20.client.internal.ClientMessage.TransactionStartCompleted.Builder.class);
-      }
-
-      // Construct using com.jen20.client.internal.ClientMessage.TransactionStartCompleted.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        transactionId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        message_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionStartCompleted_descriptor;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionStartCompleted getDefaultInstanceForType() {
-        return com.jen20.client.internal.ClientMessage.TransactionStartCompleted.getDefaultInstance();
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionStartCompleted build() {
-        com.jen20.client.internal.ClientMessage.TransactionStartCompleted result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionStartCompleted buildPartial() {
-        com.jen20.client.internal.ClientMessage.TransactionStartCompleted result = new com.jen20.client.internal.ClientMessage.TransactionStartCompleted(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.transactionId_ = transactionId_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.result_ = result_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.message_ = message_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.jen20.client.internal.ClientMessage.TransactionStartCompleted) {
-          return mergeFrom((com.jen20.client.internal.ClientMessage.TransactionStartCompleted)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.jen20.client.internal.ClientMessage.TransactionStartCompleted other) {
-        if (other == com.jen20.client.internal.ClientMessage.TransactionStartCompleted.getDefaultInstance()) return this;
-        if (other.hasTransactionId()) {
-          setTransactionId(other.getTransactionId());
-        }
-        if (other.hasResult()) {
-          setResult(other.getResult());
-        }
-        if (other.hasMessage()) {
-          bitField0_ |= 0x00000004;
-          message_ = other.message_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasTransactionId()) {
-          
-          return false;
-        }
-        if (!hasResult()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.jen20.client.internal.ClientMessage.TransactionStartCompleted parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.jen20.client.internal.ClientMessage.TransactionStartCompleted) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private long transactionId_ ;
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public boolean hasTransactionId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public long getTransactionId() {
-        return transactionId_;
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public Builder setTransactionId(long value) {
-        bitField0_ |= 0x00000001;
-        transactionId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public Builder clearTransactionId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        transactionId_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.jen20.client.internal.ClientMessage.OperationResult result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public boolean hasResult() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public com.jen20.client.internal.ClientMessage.OperationResult getResult() {
-        return result_;
-      }
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public Builder setResult(com.jen20.client.internal.ClientMessage.OperationResult value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        result_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public Builder clearResult() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object message_ = "";
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public boolean hasMessage() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public java.lang.String getMessage() {
-        java.lang.Object ref = message_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            message_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getMessageBytes() {
-        java.lang.Object ref = message_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          message_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public Builder setMessage(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public Builder clearMessage() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        message_ = getDefaultInstance().getMessage();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public Builder setMessageBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:EventStore.Client.Messages.TransactionStartCompleted)
-    }
-
-    static {
-      defaultInstance = new TransactionStartCompleted(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:EventStore.Client.Messages.TransactionStartCompleted)
-  }
-
-  public interface TransactionWriteOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EventStore.Client.Messages.TransactionWrite)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    boolean hasTransactionId();
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    long getTransactionId();
-
-    /**
-     * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-     */
-    java.util.List<com.jen20.client.internal.ClientMessage.NewEvent> 
-        getEventsList();
-    /**
-     * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-     */
-    com.jen20.client.internal.ClientMessage.NewEvent getEvents(int index);
-    /**
-     * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-     */
-    int getEventsCount();
-    /**
-     * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-     */
-    java.util.List<? extends com.jen20.client.internal.ClientMessage.NewEventOrBuilder> 
-        getEventsOrBuilderList();
-    /**
-     * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-     */
-    com.jen20.client.internal.ClientMessage.NewEventOrBuilder getEventsOrBuilder(
-        int index);
-
-    /**
-     * <code>required bool require_master = 3;</code>
-     */
-    boolean hasRequireMaster();
-    /**
-     * <code>required bool require_master = 3;</code>
-     */
-    boolean getRequireMaster();
-  }
-  /**
-   * Protobuf type {@code EventStore.Client.Messages.TransactionWrite}
-   */
-  public static final class TransactionWrite extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:EventStore.Client.Messages.TransactionWrite)
-      TransactionWriteOrBuilder {
-    // Use TransactionWrite.newBuilder() to construct.
-    private TransactionWrite(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private TransactionWrite(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final TransactionWrite defaultInstance;
-    public static TransactionWrite getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public TransactionWrite getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TransactionWrite(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              transactionId_ = input.readInt64();
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                events_ = new java.util.ArrayList<com.jen20.client.internal.ClientMessage.NewEvent>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              events_.add(input.readMessage(com.jen20.client.internal.ClientMessage.NewEvent.PARSER, extensionRegistry));
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000002;
-              requireMaster_ = input.readBool();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          events_ = java.util.Collections.unmodifiableList(events_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionWrite_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionWrite_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.jen20.client.internal.ClientMessage.TransactionWrite.class, com.jen20.client.internal.ClientMessage.TransactionWrite.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<TransactionWrite> PARSER =
-        new com.google.protobuf.AbstractParser<TransactionWrite>() {
-      public TransactionWrite parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TransactionWrite(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TransactionWrite> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int TRANSACTION_ID_FIELD_NUMBER = 1;
-    private long transactionId_;
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    public boolean hasTransactionId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    public long getTransactionId() {
-      return transactionId_;
-    }
-
-    public static final int EVENTS_FIELD_NUMBER = 2;
-    private java.util.List<com.jen20.client.internal.ClientMessage.NewEvent> events_;
-    /**
-     * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-     */
-    public java.util.List<com.jen20.client.internal.ClientMessage.NewEvent> getEventsList() {
-      return events_;
-    }
-    /**
-     * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-     */
-    public java.util.List<? extends com.jen20.client.internal.ClientMessage.NewEventOrBuilder> 
-        getEventsOrBuilderList() {
-      return events_;
-    }
-    /**
-     * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-     */
-    public int getEventsCount() {
-      return events_.size();
-    }
-    /**
-     * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-     */
-    public com.jen20.client.internal.ClientMessage.NewEvent getEvents(int index) {
-      return events_.get(index);
-    }
-    /**
-     * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-     */
-    public com.jen20.client.internal.ClientMessage.NewEventOrBuilder getEventsOrBuilder(
-        int index) {
-      return events_.get(index);
-    }
-
-    public static final int REQUIRE_MASTER_FIELD_NUMBER = 3;
-    private boolean requireMaster_;
-    /**
-     * <code>required bool require_master = 3;</code>
-     */
-    public boolean hasRequireMaster() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required bool require_master = 3;</code>
-     */
-    public boolean getRequireMaster() {
-      return requireMaster_;
-    }
-
-    private void initFields() {
-      transactionId_ = 0L;
-      events_ = java.util.Collections.emptyList();
-      requireMaster_ = false;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasTransactionId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasRequireMaster()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getEventsCount(); i++) {
-        if (!getEvents(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt64(1, transactionId_);
-      }
-      for (int i = 0; i < events_.size(); i++) {
-        output.writeMessage(2, events_.get(i));
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBool(3, requireMaster_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, transactionId_);
-      }
-      for (int i = 0; i < events_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, events_.get(i));
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, requireMaster_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.jen20.client.internal.ClientMessage.TransactionWrite parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWrite parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWrite parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWrite parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWrite parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWrite parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWrite parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWrite parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWrite parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWrite parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.jen20.client.internal.ClientMessage.TransactionWrite prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code EventStore.Client.Messages.TransactionWrite}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EventStore.Client.Messages.TransactionWrite)
-        com.jen20.client.internal.ClientMessage.TransactionWriteOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionWrite_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionWrite_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.jen20.client.internal.ClientMessage.TransactionWrite.class, com.jen20.client.internal.ClientMessage.TransactionWrite.Builder.class);
-      }
-
-      // Construct using com.jen20.client.internal.ClientMessage.TransactionWrite.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getEventsFieldBuilder();
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        transactionId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (eventsBuilder_ == null) {
-          events_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          eventsBuilder_.clear();
-        }
-        requireMaster_ = false;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionWrite_descriptor;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionWrite getDefaultInstanceForType() {
-        return com.jen20.client.internal.ClientMessage.TransactionWrite.getDefaultInstance();
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionWrite build() {
-        com.jen20.client.internal.ClientMessage.TransactionWrite result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionWrite buildPartial() {
-        com.jen20.client.internal.ClientMessage.TransactionWrite result = new com.jen20.client.internal.ClientMessage.TransactionWrite(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.transactionId_ = transactionId_;
-        if (eventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            events_ = java.util.Collections.unmodifiableList(events_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.events_ = events_;
-        } else {
-          result.events_ = eventsBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.requireMaster_ = requireMaster_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.jen20.client.internal.ClientMessage.TransactionWrite) {
-          return mergeFrom((com.jen20.client.internal.ClientMessage.TransactionWrite)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.jen20.client.internal.ClientMessage.TransactionWrite other) {
-        if (other == com.jen20.client.internal.ClientMessage.TransactionWrite.getDefaultInstance()) return this;
-        if (other.hasTransactionId()) {
-          setTransactionId(other.getTransactionId());
-        }
-        if (eventsBuilder_ == null) {
-          if (!other.events_.isEmpty()) {
-            if (events_.isEmpty()) {
-              events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureEventsIsMutable();
-              events_.addAll(other.events_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.events_.isEmpty()) {
-            if (eventsBuilder_.isEmpty()) {
-              eventsBuilder_.dispose();
-              eventsBuilder_ = null;
-              events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              eventsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getEventsFieldBuilder() : null;
-            } else {
-              eventsBuilder_.addAllMessages(other.events_);
-            }
-          }
-        }
-        if (other.hasRequireMaster()) {
-          setRequireMaster(other.getRequireMaster());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasTransactionId()) {
-          
-          return false;
-        }
-        if (!hasRequireMaster()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getEventsCount(); i++) {
-          if (!getEvents(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.jen20.client.internal.ClientMessage.TransactionWrite parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.jen20.client.internal.ClientMessage.TransactionWrite) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private long transactionId_ ;
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public boolean hasTransactionId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public long getTransactionId() {
-        return transactionId_;
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public Builder setTransactionId(long value) {
-        bitField0_ |= 0x00000001;
-        transactionId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public Builder clearTransactionId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        transactionId_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<com.jen20.client.internal.ClientMessage.NewEvent> events_ =
-        java.util.Collections.emptyList();
-      private void ensureEventsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          events_ = new java.util.ArrayList<com.jen20.client.internal.ClientMessage.NewEvent>(events_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.jen20.client.internal.ClientMessage.NewEvent, com.jen20.client.internal.ClientMessage.NewEvent.Builder, com.jen20.client.internal.ClientMessage.NewEventOrBuilder> eventsBuilder_;
-
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public java.util.List<com.jen20.client.internal.ClientMessage.NewEvent> getEventsList() {
-        if (eventsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(events_);
-        } else {
-          return eventsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public int getEventsCount() {
-        if (eventsBuilder_ == null) {
-          return events_.size();
-        } else {
-          return eventsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public com.jen20.client.internal.ClientMessage.NewEvent getEvents(int index) {
-        if (eventsBuilder_ == null) {
-          return events_.get(index);
-        } else {
-          return eventsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public Builder setEvents(
-          int index, com.jen20.client.internal.ClientMessage.NewEvent value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.set(index, value);
-          onChanged();
-        } else {
-          eventsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public Builder setEvents(
-          int index, com.jen20.client.internal.ClientMessage.NewEvent.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public Builder addEvents(com.jen20.client.internal.ClientMessage.NewEvent value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.add(value);
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public Builder addEvents(
-          int index, com.jen20.client.internal.ClientMessage.NewEvent value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.add(index, value);
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public Builder addEvents(
-          com.jen20.client.internal.ClientMessage.NewEvent.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.add(builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public Builder addEvents(
-          int index, com.jen20.client.internal.ClientMessage.NewEvent.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public Builder addAllEvents(
-          java.lang.Iterable<? extends com.jen20.client.internal.ClientMessage.NewEvent> values) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, events_);
-          onChanged();
-        } else {
-          eventsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public Builder clearEvents() {
-        if (eventsBuilder_ == null) {
-          events_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          eventsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public Builder removeEvents(int index) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.remove(index);
-          onChanged();
-        } else {
-          eventsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public com.jen20.client.internal.ClientMessage.NewEvent.Builder getEventsBuilder(
-          int index) {
-        return getEventsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public com.jen20.client.internal.ClientMessage.NewEventOrBuilder getEventsOrBuilder(
-          int index) {
-        if (eventsBuilder_ == null) {
-          return events_.get(index);  } else {
-          return eventsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public java.util.List<? extends com.jen20.client.internal.ClientMessage.NewEventOrBuilder> 
-           getEventsOrBuilderList() {
-        if (eventsBuilder_ != null) {
-          return eventsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(events_);
-        }
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public com.jen20.client.internal.ClientMessage.NewEvent.Builder addEventsBuilder() {
-        return getEventsFieldBuilder().addBuilder(
-            com.jen20.client.internal.ClientMessage.NewEvent.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public com.jen20.client.internal.ClientMessage.NewEvent.Builder addEventsBuilder(
-          int index) {
-        return getEventsFieldBuilder().addBuilder(
-            index, com.jen20.client.internal.ClientMessage.NewEvent.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .EventStore.Client.Messages.NewEvent events = 2;</code>
-       */
-      public java.util.List<com.jen20.client.internal.ClientMessage.NewEvent.Builder> 
-           getEventsBuilderList() {
-        return getEventsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.jen20.client.internal.ClientMessage.NewEvent, com.jen20.client.internal.ClientMessage.NewEvent.Builder, com.jen20.client.internal.ClientMessage.NewEventOrBuilder> 
-          getEventsFieldBuilder() {
-        if (eventsBuilder_ == null) {
-          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.jen20.client.internal.ClientMessage.NewEvent, com.jen20.client.internal.ClientMessage.NewEvent.Builder, com.jen20.client.internal.ClientMessage.NewEventOrBuilder>(
-                  events_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          events_ = null;
-        }
-        return eventsBuilder_;
-      }
-
-      private boolean requireMaster_ ;
-      /**
-       * <code>required bool require_master = 3;</code>
-       */
-      public boolean hasRequireMaster() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required bool require_master = 3;</code>
-       */
-      public boolean getRequireMaster() {
-        return requireMaster_;
-      }
-      /**
-       * <code>required bool require_master = 3;</code>
-       */
-      public Builder setRequireMaster(boolean value) {
-        bitField0_ |= 0x00000004;
-        requireMaster_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required bool require_master = 3;</code>
-       */
-      public Builder clearRequireMaster() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        requireMaster_ = false;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:EventStore.Client.Messages.TransactionWrite)
-    }
-
-    static {
-      defaultInstance = new TransactionWrite(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:EventStore.Client.Messages.TransactionWrite)
-  }
-
-  public interface TransactionWriteCompletedOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EventStore.Client.Messages.TransactionWriteCompleted)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    boolean hasTransactionId();
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    long getTransactionId();
-
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    boolean hasResult();
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    com.jen20.client.internal.ClientMessage.OperationResult getResult();
-
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    boolean hasMessage();
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    java.lang.String getMessage();
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getMessageBytes();
-  }
-  /**
-   * Protobuf type {@code EventStore.Client.Messages.TransactionWriteCompleted}
-   */
-  public static final class TransactionWriteCompleted extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:EventStore.Client.Messages.TransactionWriteCompleted)
-      TransactionWriteCompletedOrBuilder {
-    // Use TransactionWriteCompleted.newBuilder() to construct.
-    private TransactionWriteCompleted(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private TransactionWriteCompleted(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final TransactionWriteCompleted defaultInstance;
-    public static TransactionWriteCompleted getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public TransactionWriteCompleted getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TransactionWriteCompleted(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              transactionId_ = input.readInt64();
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-              com.jen20.client.internal.ClientMessage.OperationResult value = com.jen20.client.internal.ClientMessage.OperationResult.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(2, rawValue);
-              } else {
-                bitField0_ |= 0x00000002;
-                result_ = value;
-              }
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              message_ = bs;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionWriteCompleted_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionWriteCompleted_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.jen20.client.internal.ClientMessage.TransactionWriteCompleted.class, com.jen20.client.internal.ClientMessage.TransactionWriteCompleted.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<TransactionWriteCompleted> PARSER =
-        new com.google.protobuf.AbstractParser<TransactionWriteCompleted>() {
-      public TransactionWriteCompleted parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TransactionWriteCompleted(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TransactionWriteCompleted> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int TRANSACTION_ID_FIELD_NUMBER = 1;
-    private long transactionId_;
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    public boolean hasTransactionId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    public long getTransactionId() {
-      return transactionId_;
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 2;
-    private com.jen20.client.internal.ClientMessage.OperationResult result_;
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    public boolean hasResult() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    public com.jen20.client.internal.ClientMessage.OperationResult getResult() {
-      return result_;
-    }
-
-    public static final int MESSAGE_FIELD_NUMBER = 3;
-    private java.lang.Object message_;
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    public boolean hasMessage() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          message_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getMessageBytes() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        message_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private void initFields() {
-      transactionId_ = 0L;
-      result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-      message_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasTransactionId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasResult()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt64(1, transactionId_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeEnum(2, result_.getNumber());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getMessageBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, transactionId_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, result_.getNumber());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getMessageBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.jen20.client.internal.ClientMessage.TransactionWriteCompleted prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code EventStore.Client.Messages.TransactionWriteCompleted}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EventStore.Client.Messages.TransactionWriteCompleted)
-        com.jen20.client.internal.ClientMessage.TransactionWriteCompletedOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionWriteCompleted_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionWriteCompleted_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.jen20.client.internal.ClientMessage.TransactionWriteCompleted.class, com.jen20.client.internal.ClientMessage.TransactionWriteCompleted.Builder.class);
-      }
-
-      // Construct using com.jen20.client.internal.ClientMessage.TransactionWriteCompleted.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        transactionId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        message_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionWriteCompleted_descriptor;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionWriteCompleted getDefaultInstanceForType() {
-        return com.jen20.client.internal.ClientMessage.TransactionWriteCompleted.getDefaultInstance();
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionWriteCompleted build() {
-        com.jen20.client.internal.ClientMessage.TransactionWriteCompleted result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionWriteCompleted buildPartial() {
-        com.jen20.client.internal.ClientMessage.TransactionWriteCompleted result = new com.jen20.client.internal.ClientMessage.TransactionWriteCompleted(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.transactionId_ = transactionId_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.result_ = result_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.message_ = message_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.jen20.client.internal.ClientMessage.TransactionWriteCompleted) {
-          return mergeFrom((com.jen20.client.internal.ClientMessage.TransactionWriteCompleted)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.jen20.client.internal.ClientMessage.TransactionWriteCompleted other) {
-        if (other == com.jen20.client.internal.ClientMessage.TransactionWriteCompleted.getDefaultInstance()) return this;
-        if (other.hasTransactionId()) {
-          setTransactionId(other.getTransactionId());
-        }
-        if (other.hasResult()) {
-          setResult(other.getResult());
-        }
-        if (other.hasMessage()) {
-          bitField0_ |= 0x00000004;
-          message_ = other.message_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasTransactionId()) {
-          
-          return false;
-        }
-        if (!hasResult()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.jen20.client.internal.ClientMessage.TransactionWriteCompleted parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.jen20.client.internal.ClientMessage.TransactionWriteCompleted) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private long transactionId_ ;
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public boolean hasTransactionId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public long getTransactionId() {
-        return transactionId_;
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public Builder setTransactionId(long value) {
-        bitField0_ |= 0x00000001;
-        transactionId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public Builder clearTransactionId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        transactionId_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.jen20.client.internal.ClientMessage.OperationResult result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public boolean hasResult() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public com.jen20.client.internal.ClientMessage.OperationResult getResult() {
-        return result_;
-      }
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public Builder setResult(com.jen20.client.internal.ClientMessage.OperationResult value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        result_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public Builder clearResult() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object message_ = "";
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public boolean hasMessage() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public java.lang.String getMessage() {
-        java.lang.Object ref = message_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            message_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getMessageBytes() {
-        java.lang.Object ref = message_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          message_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public Builder setMessage(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public Builder clearMessage() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        message_ = getDefaultInstance().getMessage();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public Builder setMessageBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:EventStore.Client.Messages.TransactionWriteCompleted)
-    }
-
-    static {
-      defaultInstance = new TransactionWriteCompleted(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:EventStore.Client.Messages.TransactionWriteCompleted)
-  }
-
-  public interface TransactionCommitOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EventStore.Client.Messages.TransactionCommit)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    boolean hasTransactionId();
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    long getTransactionId();
-
-    /**
-     * <code>required bool require_master = 2;</code>
-     */
-    boolean hasRequireMaster();
-    /**
-     * <code>required bool require_master = 2;</code>
-     */
-    boolean getRequireMaster();
-  }
-  /**
-   * Protobuf type {@code EventStore.Client.Messages.TransactionCommit}
-   */
-  public static final class TransactionCommit extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:EventStore.Client.Messages.TransactionCommit)
-      TransactionCommitOrBuilder {
-    // Use TransactionCommit.newBuilder() to construct.
-    private TransactionCommit(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private TransactionCommit(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final TransactionCommit defaultInstance;
-    public static TransactionCommit getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public TransactionCommit getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TransactionCommit(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              transactionId_ = input.readInt64();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              requireMaster_ = input.readBool();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionCommit_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionCommit_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.jen20.client.internal.ClientMessage.TransactionCommit.class, com.jen20.client.internal.ClientMessage.TransactionCommit.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<TransactionCommit> PARSER =
-        new com.google.protobuf.AbstractParser<TransactionCommit>() {
-      public TransactionCommit parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TransactionCommit(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TransactionCommit> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int TRANSACTION_ID_FIELD_NUMBER = 1;
-    private long transactionId_;
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    public boolean hasTransactionId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    public long getTransactionId() {
-      return transactionId_;
-    }
-
-    public static final int REQUIRE_MASTER_FIELD_NUMBER = 2;
-    private boolean requireMaster_;
-    /**
-     * <code>required bool require_master = 2;</code>
-     */
-    public boolean hasRequireMaster() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required bool require_master = 2;</code>
-     */
-    public boolean getRequireMaster() {
-      return requireMaster_;
-    }
-
-    private void initFields() {
-      transactionId_ = 0L;
-      requireMaster_ = false;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasTransactionId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasRequireMaster()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt64(1, transactionId_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBool(2, requireMaster_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, transactionId_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, requireMaster_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.jen20.client.internal.ClientMessage.TransactionCommit parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommit parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommit parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommit parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommit parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommit parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommit parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommit parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommit parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommit parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.jen20.client.internal.ClientMessage.TransactionCommit prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code EventStore.Client.Messages.TransactionCommit}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EventStore.Client.Messages.TransactionCommit)
-        com.jen20.client.internal.ClientMessage.TransactionCommitOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionCommit_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionCommit_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.jen20.client.internal.ClientMessage.TransactionCommit.class, com.jen20.client.internal.ClientMessage.TransactionCommit.Builder.class);
-      }
-
-      // Construct using com.jen20.client.internal.ClientMessage.TransactionCommit.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        transactionId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        requireMaster_ = false;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionCommit_descriptor;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionCommit getDefaultInstanceForType() {
-        return com.jen20.client.internal.ClientMessage.TransactionCommit.getDefaultInstance();
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionCommit build() {
-        com.jen20.client.internal.ClientMessage.TransactionCommit result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionCommit buildPartial() {
-        com.jen20.client.internal.ClientMessage.TransactionCommit result = new com.jen20.client.internal.ClientMessage.TransactionCommit(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.transactionId_ = transactionId_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.requireMaster_ = requireMaster_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.jen20.client.internal.ClientMessage.TransactionCommit) {
-          return mergeFrom((com.jen20.client.internal.ClientMessage.TransactionCommit)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.jen20.client.internal.ClientMessage.TransactionCommit other) {
-        if (other == com.jen20.client.internal.ClientMessage.TransactionCommit.getDefaultInstance()) return this;
-        if (other.hasTransactionId()) {
-          setTransactionId(other.getTransactionId());
-        }
-        if (other.hasRequireMaster()) {
-          setRequireMaster(other.getRequireMaster());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasTransactionId()) {
-          
-          return false;
-        }
-        if (!hasRequireMaster()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.jen20.client.internal.ClientMessage.TransactionCommit parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.jen20.client.internal.ClientMessage.TransactionCommit) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private long transactionId_ ;
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public boolean hasTransactionId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public long getTransactionId() {
-        return transactionId_;
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public Builder setTransactionId(long value) {
-        bitField0_ |= 0x00000001;
-        transactionId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public Builder clearTransactionId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        transactionId_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private boolean requireMaster_ ;
-      /**
-       * <code>required bool require_master = 2;</code>
-       */
-      public boolean hasRequireMaster() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required bool require_master = 2;</code>
-       */
-      public boolean getRequireMaster() {
-        return requireMaster_;
-      }
-      /**
-       * <code>required bool require_master = 2;</code>
-       */
-      public Builder setRequireMaster(boolean value) {
-        bitField0_ |= 0x00000002;
-        requireMaster_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required bool require_master = 2;</code>
-       */
-      public Builder clearRequireMaster() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        requireMaster_ = false;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:EventStore.Client.Messages.TransactionCommit)
-    }
-
-    static {
-      defaultInstance = new TransactionCommit(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:EventStore.Client.Messages.TransactionCommit)
-  }
-
-  public interface TransactionCommitCompletedOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:EventStore.Client.Messages.TransactionCommitCompleted)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    boolean hasTransactionId();
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    long getTransactionId();
-
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    boolean hasResult();
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    com.jen20.client.internal.ClientMessage.OperationResult getResult();
-
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    boolean hasMessage();
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    java.lang.String getMessage();
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getMessageBytes();
-
-    /**
-     * <code>required int32 first_event_number = 4;</code>
-     */
-    boolean hasFirstEventNumber();
-    /**
-     * <code>required int32 first_event_number = 4;</code>
-     */
-    int getFirstEventNumber();
-
-    /**
-     * <code>required int32 last_event_number = 5;</code>
-     */
-    boolean hasLastEventNumber();
-    /**
-     * <code>required int32 last_event_number = 5;</code>
-     */
-    int getLastEventNumber();
-
-    /**
-     * <code>optional int64 prepare_position = 6;</code>
-     */
-    boolean hasPreparePosition();
-    /**
-     * <code>optional int64 prepare_position = 6;</code>
-     */
-    long getPreparePosition();
-
-    /**
-     * <code>optional int64 commit_position = 7;</code>
-     */
-    boolean hasCommitPosition();
-    /**
-     * <code>optional int64 commit_position = 7;</code>
-     */
-    long getCommitPosition();
-  }
-  /**
-   * Protobuf type {@code EventStore.Client.Messages.TransactionCommitCompleted}
-   */
-  public static final class TransactionCommitCompleted extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:EventStore.Client.Messages.TransactionCommitCompleted)
-      TransactionCommitCompletedOrBuilder {
-    // Use TransactionCommitCompleted.newBuilder() to construct.
-    private TransactionCommitCompleted(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private TransactionCommitCompleted(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final TransactionCommitCompleted defaultInstance;
-    public static TransactionCommitCompleted getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public TransactionCommitCompleted getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TransactionCommitCompleted(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              transactionId_ = input.readInt64();
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-              com.jen20.client.internal.ClientMessage.OperationResult value = com.jen20.client.internal.ClientMessage.OperationResult.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(2, rawValue);
-              } else {
-                bitField0_ |= 0x00000002;
-                result_ = value;
-              }
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              message_ = bs;
-              break;
-            }
-            case 32: {
-              bitField0_ |= 0x00000008;
-              firstEventNumber_ = input.readInt32();
-              break;
-            }
-            case 40: {
-              bitField0_ |= 0x00000010;
-              lastEventNumber_ = input.readInt32();
-              break;
-            }
-            case 48: {
-              bitField0_ |= 0x00000020;
-              preparePosition_ = input.readInt64();
-              break;
-            }
-            case 56: {
-              bitField0_ |= 0x00000040;
-              commitPosition_ = input.readInt64();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionCommitCompleted_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionCommitCompleted_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.jen20.client.internal.ClientMessage.TransactionCommitCompleted.class, com.jen20.client.internal.ClientMessage.TransactionCommitCompleted.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<TransactionCommitCompleted> PARSER =
-        new com.google.protobuf.AbstractParser<TransactionCommitCompleted>() {
-      public TransactionCommitCompleted parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TransactionCommitCompleted(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TransactionCommitCompleted> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int TRANSACTION_ID_FIELD_NUMBER = 1;
-    private long transactionId_;
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    public boolean hasTransactionId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required int64 transaction_id = 1;</code>
-     */
-    public long getTransactionId() {
-      return transactionId_;
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 2;
-    private com.jen20.client.internal.ClientMessage.OperationResult result_;
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    public boolean hasResult() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-     */
-    public com.jen20.client.internal.ClientMessage.OperationResult getResult() {
-      return result_;
-    }
-
-    public static final int MESSAGE_FIELD_NUMBER = 3;
-    private java.lang.Object message_;
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    public boolean hasMessage() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          message_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string message = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getMessageBytes() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        message_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FIRST_EVENT_NUMBER_FIELD_NUMBER = 4;
-    private int firstEventNumber_;
-    /**
-     * <code>required int32 first_event_number = 4;</code>
-     */
-    public boolean hasFirstEventNumber() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>required int32 first_event_number = 4;</code>
-     */
-    public int getFirstEventNumber() {
-      return firstEventNumber_;
-    }
-
-    public static final int LAST_EVENT_NUMBER_FIELD_NUMBER = 5;
-    private int lastEventNumber_;
-    /**
-     * <code>required int32 last_event_number = 5;</code>
-     */
-    public boolean hasLastEventNumber() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>required int32 last_event_number = 5;</code>
-     */
-    public int getLastEventNumber() {
-      return lastEventNumber_;
-    }
-
-    public static final int PREPARE_POSITION_FIELD_NUMBER = 6;
-    private long preparePosition_;
-    /**
-     * <code>optional int64 prepare_position = 6;</code>
-     */
-    public boolean hasPreparePosition() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>optional int64 prepare_position = 6;</code>
-     */
-    public long getPreparePosition() {
-      return preparePosition_;
-    }
-
-    public static final int COMMIT_POSITION_FIELD_NUMBER = 7;
-    private long commitPosition_;
-    /**
-     * <code>optional int64 commit_position = 7;</code>
-     */
-    public boolean hasCommitPosition() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
-    }
-    /**
-     * <code>optional int64 commit_position = 7;</code>
-     */
-    public long getCommitPosition() {
-      return commitPosition_;
-    }
-
-    private void initFields() {
-      transactionId_ = 0L;
-      result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-      message_ = "";
-      firstEventNumber_ = 0;
-      lastEventNumber_ = 0;
-      preparePosition_ = 0L;
-      commitPosition_ = 0L;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasTransactionId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasResult()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasFirstEventNumber()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasLastEventNumber()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt64(1, transactionId_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeEnum(2, result_.getNumber());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getMessageBytes());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt32(4, firstEventNumber_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeInt32(5, lastEventNumber_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt64(6, preparePosition_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeInt64(7, commitPosition_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, transactionId_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, result_.getNumber());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getMessageBytes());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, firstEventNumber_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, lastEventNumber_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, preparePosition_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(7, commitPosition_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.jen20.client.internal.ClientMessage.TransactionCommitCompleted prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code EventStore.Client.Messages.TransactionCommitCompleted}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:EventStore.Client.Messages.TransactionCommitCompleted)
-        com.jen20.client.internal.ClientMessage.TransactionCommitCompletedOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionCommitCompleted_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionCommitCompleted_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.jen20.client.internal.ClientMessage.TransactionCommitCompleted.class, com.jen20.client.internal.ClientMessage.TransactionCommitCompleted.Builder.class);
-      }
-
-      // Construct using com.jen20.client.internal.ClientMessage.TransactionCommitCompleted.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        transactionId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        message_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        firstEventNumber_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        lastEventNumber_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        preparePosition_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000020);
-        commitPosition_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000040);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.jen20.client.internal.ClientMessage.internal_static_EventStore_Client_Messages_TransactionCommitCompleted_descriptor;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionCommitCompleted getDefaultInstanceForType() {
-        return com.jen20.client.internal.ClientMessage.TransactionCommitCompleted.getDefaultInstance();
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionCommitCompleted build() {
-        com.jen20.client.internal.ClientMessage.TransactionCommitCompleted result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.jen20.client.internal.ClientMessage.TransactionCommitCompleted buildPartial() {
-        com.jen20.client.internal.ClientMessage.TransactionCommitCompleted result = new com.jen20.client.internal.ClientMessage.TransactionCommitCompleted(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.transactionId_ = transactionId_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.result_ = result_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.message_ = message_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.firstEventNumber_ = firstEventNumber_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.lastEventNumber_ = lastEventNumber_;
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        result.preparePosition_ = preparePosition_;
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000040;
-        }
-        result.commitPosition_ = commitPosition_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.jen20.client.internal.ClientMessage.TransactionCommitCompleted) {
-          return mergeFrom((com.jen20.client.internal.ClientMessage.TransactionCommitCompleted)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.jen20.client.internal.ClientMessage.TransactionCommitCompleted other) {
-        if (other == com.jen20.client.internal.ClientMessage.TransactionCommitCompleted.getDefaultInstance()) return this;
-        if (other.hasTransactionId()) {
-          setTransactionId(other.getTransactionId());
-        }
-        if (other.hasResult()) {
-          setResult(other.getResult());
-        }
-        if (other.hasMessage()) {
-          bitField0_ |= 0x00000004;
-          message_ = other.message_;
-          onChanged();
-        }
-        if (other.hasFirstEventNumber()) {
-          setFirstEventNumber(other.getFirstEventNumber());
-        }
-        if (other.hasLastEventNumber()) {
-          setLastEventNumber(other.getLastEventNumber());
-        }
-        if (other.hasPreparePosition()) {
-          setPreparePosition(other.getPreparePosition());
-        }
-        if (other.hasCommitPosition()) {
-          setCommitPosition(other.getCommitPosition());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasTransactionId()) {
-          
-          return false;
-        }
-        if (!hasResult()) {
-          
-          return false;
-        }
-        if (!hasFirstEventNumber()) {
-          
-          return false;
-        }
-        if (!hasLastEventNumber()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.jen20.client.internal.ClientMessage.TransactionCommitCompleted parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.jen20.client.internal.ClientMessage.TransactionCommitCompleted) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private long transactionId_ ;
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public boolean hasTransactionId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public long getTransactionId() {
-        return transactionId_;
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public Builder setTransactionId(long value) {
-        bitField0_ |= 0x00000001;
-        transactionId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int64 transaction_id = 1;</code>
-       */
-      public Builder clearTransactionId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        transactionId_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.jen20.client.internal.ClientMessage.OperationResult result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public boolean hasResult() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public com.jen20.client.internal.ClientMessage.OperationResult getResult() {
-        return result_;
-      }
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public Builder setResult(com.jen20.client.internal.ClientMessage.OperationResult value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        result_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required .EventStore.Client.Messages.OperationResult result = 2;</code>
-       */
-      public Builder clearResult() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        result_ = com.jen20.client.internal.ClientMessage.OperationResult.Success;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object message_ = "";
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public boolean hasMessage() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public java.lang.String getMessage() {
-        java.lang.Object ref = message_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            message_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getMessageBytes() {
-        java.lang.Object ref = message_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          message_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public Builder setMessage(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public Builder clearMessage() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        message_ = getDefaultInstance().getMessage();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string message = 3;</code>
-       */
-      public Builder setMessageBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int firstEventNumber_ ;
-      /**
-       * <code>required int32 first_event_number = 4;</code>
-       */
-      public boolean hasFirstEventNumber() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>required int32 first_event_number = 4;</code>
-       */
-      public int getFirstEventNumber() {
-        return firstEventNumber_;
-      }
-      /**
-       * <code>required int32 first_event_number = 4;</code>
-       */
-      public Builder setFirstEventNumber(int value) {
-        bitField0_ |= 0x00000008;
-        firstEventNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 first_event_number = 4;</code>
-       */
-      public Builder clearFirstEventNumber() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        firstEventNumber_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int lastEventNumber_ ;
-      /**
-       * <code>required int32 last_event_number = 5;</code>
-       */
-      public boolean hasLastEventNumber() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>required int32 last_event_number = 5;</code>
-       */
-      public int getLastEventNumber() {
-        return lastEventNumber_;
-      }
-      /**
-       * <code>required int32 last_event_number = 5;</code>
-       */
-      public Builder setLastEventNumber(int value) {
-        bitField0_ |= 0x00000010;
-        lastEventNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 last_event_number = 5;</code>
-       */
-      public Builder clearLastEventNumber() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        lastEventNumber_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private long preparePosition_ ;
-      /**
-       * <code>optional int64 prepare_position = 6;</code>
-       */
-      public boolean hasPreparePosition() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>optional int64 prepare_position = 6;</code>
-       */
-      public long getPreparePosition() {
-        return preparePosition_;
-      }
-      /**
-       * <code>optional int64 prepare_position = 6;</code>
-       */
-      public Builder setPreparePosition(long value) {
-        bitField0_ |= 0x00000020;
-        preparePosition_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 prepare_position = 6;</code>
-       */
-      public Builder clearPreparePosition() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        preparePosition_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long commitPosition_ ;
-      /**
-       * <code>optional int64 commit_position = 7;</code>
-       */
-      public boolean hasCommitPosition() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      /**
-       * <code>optional int64 commit_position = 7;</code>
-       */
-      public long getCommitPosition() {
-        return commitPosition_;
-      }
-      /**
-       * <code>optional int64 commit_position = 7;</code>
-       */
-      public Builder setCommitPosition(long value) {
-        bitField0_ |= 0x00000040;
-        commitPosition_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int64 commit_position = 7;</code>
-       */
-      public Builder clearCommitPosition() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        commitPosition_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:EventStore.Client.Messages.TransactionCommitCompleted)
-    }
-
-    static {
-      defaultInstance = new TransactionCommitCompleted(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:EventStore.Client.Messages.TransactionCommitCompleted)
-  }
-
   public interface ReadEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:EventStore.Client.Messages.ReadEvent)
       com.google.protobuf.MessageOrBuilder {
@@ -12027,6 +8312,72 @@ public final class ClientMessage {
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.ReadEvent)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.ReadEvent other = (com.jen20.client.internal.ClientMessage.ReadEvent) obj;
+
+      boolean result = true;
+      result = result && (hasEventStreamId() == other.hasEventStreamId());
+      if (hasEventStreamId()) {
+        result = result && getEventStreamId()
+            .equals(other.getEventStreamId());
+      }
+      result = result && (hasEventNumber() == other.hasEventNumber());
+      if (hasEventNumber()) {
+        result = result && (getEventNumber()
+            == other.getEventNumber());
+      }
+      result = result && (hasResolveLinkTos() == other.hasResolveLinkTos());
+      if (hasResolveLinkTos()) {
+        result = result && (getResolveLinkTos()
+            == other.getResolveLinkTos());
+      }
+      result = result && (hasRequireMaster() == other.hasRequireMaster());
+      if (hasRequireMaster()) {
+        result = result && (getRequireMaster()
+            == other.getRequireMaster());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEventStreamId()) {
+        hash = (37 * hash) + EVENT_STREAM_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getEventStreamId().hashCode();
+      }
+      if (hasEventNumber()) {
+        hash = (37 * hash) + EVENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getEventNumber();
+      }
+      if (hasResolveLinkTos()) {
+        hash = (37 * hash) + RESOLVE_LINK_TOS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getResolveLinkTos());
+      }
+      if (hasRequireMaster()) {
+        hash = (37 * hash) + REQUIRE_MASTER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getRequireMaster());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.jen20.client.internal.ClientMessage.ReadEvent parseFrom(
@@ -12872,6 +9223,62 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.ReadEventCompleted)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.ReadEventCompleted other = (com.jen20.client.internal.ClientMessage.ReadEventCompleted) obj;
+
+      boolean result = true;
+      result = result && (hasResult() == other.hasResult());
+      if (hasResult()) {
+        result = result &&
+            (getResult() == other.getResult());
+      }
+      result = result && (hasEvent() == other.hasEvent());
+      if (hasEvent()) {
+        result = result && getEvent()
+            .equals(other.getEvent());
+      }
+      result = result && (hasError() == other.hasError());
+      if (hasError()) {
+        result = result && getError()
+            .equals(other.getError());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashEnum(
+            getResult());
+      }
+      if (hasEvent()) {
+        hash = (37 * hash) + EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEvent().hashCode();
+      }
+      if (hasError()) {
+        hash = (37 * hash) + ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getError().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.ReadEventCompleted parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -13704,6 +10111,81 @@ public final class ClientMessage {
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.ReadStreamEvents)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.ReadStreamEvents other = (com.jen20.client.internal.ClientMessage.ReadStreamEvents) obj;
+
+      boolean result = true;
+      result = result && (hasEventStreamId() == other.hasEventStreamId());
+      if (hasEventStreamId()) {
+        result = result && getEventStreamId()
+            .equals(other.getEventStreamId());
+      }
+      result = result && (hasFromEventNumber() == other.hasFromEventNumber());
+      if (hasFromEventNumber()) {
+        result = result && (getFromEventNumber()
+            == other.getFromEventNumber());
+      }
+      result = result && (hasMaxCount() == other.hasMaxCount());
+      if (hasMaxCount()) {
+        result = result && (getMaxCount()
+            == other.getMaxCount());
+      }
+      result = result && (hasResolveLinkTos() == other.hasResolveLinkTos());
+      if (hasResolveLinkTos()) {
+        result = result && (getResolveLinkTos()
+            == other.getResolveLinkTos());
+      }
+      result = result && (hasRequireMaster() == other.hasRequireMaster());
+      if (hasRequireMaster()) {
+        result = result && (getRequireMaster()
+            == other.getRequireMaster());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEventStreamId()) {
+        hash = (37 * hash) + EVENT_STREAM_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getEventStreamId().hashCode();
+      }
+      if (hasFromEventNumber()) {
+        hash = (37 * hash) + FROM_EVENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getFromEventNumber();
+      }
+      if (hasMaxCount()) {
+        hash = (37 * hash) + MAX_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxCount();
+      }
+      if (hasResolveLinkTos()) {
+        hash = (37 * hash) + RESOLVE_LINK_TOS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getResolveLinkTos());
+      }
+      if (hasRequireMaster()) {
+        hash = (37 * hash) + REQUIRE_MASTER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getRequireMaster());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.jen20.client.internal.ClientMessage.ReadStreamEvents parseFrom(
@@ -14777,6 +11259,97 @@ public final class ClientMessage {
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.ReadStreamEventsCompleted)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.ReadStreamEventsCompleted other = (com.jen20.client.internal.ClientMessage.ReadStreamEventsCompleted) obj;
+
+      boolean result = true;
+      result = result && getEventsList()
+          .equals(other.getEventsList());
+      result = result && (hasResult() == other.hasResult());
+      if (hasResult()) {
+        result = result &&
+            (getResult() == other.getResult());
+      }
+      result = result && (hasNextEventNumber() == other.hasNextEventNumber());
+      if (hasNextEventNumber()) {
+        result = result && (getNextEventNumber()
+            == other.getNextEventNumber());
+      }
+      result = result && (hasLastEventNumber() == other.hasLastEventNumber());
+      if (hasLastEventNumber()) {
+        result = result && (getLastEventNumber()
+            == other.getLastEventNumber());
+      }
+      result = result && (hasIsEndOfStream() == other.hasIsEndOfStream());
+      if (hasIsEndOfStream()) {
+        result = result && (getIsEndOfStream()
+            == other.getIsEndOfStream());
+      }
+      result = result && (hasLastCommitPosition() == other.hasLastCommitPosition());
+      if (hasLastCommitPosition()) {
+        result = result && (getLastCommitPosition()
+            == other.getLastCommitPosition());
+      }
+      result = result && (hasError() == other.hasError());
+      if (hasError()) {
+        result = result && getError()
+            .equals(other.getError());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getEventsCount() > 0) {
+        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventsList().hashCode();
+      }
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashEnum(
+            getResult());
+      }
+      if (hasNextEventNumber()) {
+        hash = (37 * hash) + NEXT_EVENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getNextEventNumber();
+      }
+      if (hasLastEventNumber()) {
+        hash = (37 * hash) + LAST_EVENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getLastEventNumber();
+      }
+      if (hasIsEndOfStream()) {
+        hash = (37 * hash) + IS_END_OF_STREAM_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIsEndOfStream());
+      }
+      if (hasLastCommitPosition()) {
+        hash = (37 * hash) + LAST_COMMIT_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getLastCommitPosition());
+      }
+      if (hasError()) {
+        hash = (37 * hash) + ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getError().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.jen20.client.internal.ClientMessage.ReadStreamEventsCompleted parseFrom(
@@ -15906,6 +12479,83 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.ReadAllEvents)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.ReadAllEvents other = (com.jen20.client.internal.ClientMessage.ReadAllEvents) obj;
+
+      boolean result = true;
+      result = result && (hasCommitPosition() == other.hasCommitPosition());
+      if (hasCommitPosition()) {
+        result = result && (getCommitPosition()
+            == other.getCommitPosition());
+      }
+      result = result && (hasPreparePosition() == other.hasPreparePosition());
+      if (hasPreparePosition()) {
+        result = result && (getPreparePosition()
+            == other.getPreparePosition());
+      }
+      result = result && (hasMaxCount() == other.hasMaxCount());
+      if (hasMaxCount()) {
+        result = result && (getMaxCount()
+            == other.getMaxCount());
+      }
+      result = result && (hasResolveLinkTos() == other.hasResolveLinkTos());
+      if (hasResolveLinkTos()) {
+        result = result && (getResolveLinkTos()
+            == other.getResolveLinkTos());
+      }
+      result = result && (hasRequireMaster() == other.hasRequireMaster());
+      if (hasRequireMaster()) {
+        result = result && (getRequireMaster()
+            == other.getRequireMaster());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasCommitPosition()) {
+        hash = (37 * hash) + COMMIT_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCommitPosition());
+      }
+      if (hasPreparePosition()) {
+        hash = (37 * hash) + PREPARE_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPreparePosition());
+      }
+      if (hasMaxCount()) {
+        hash = (37 * hash) + MAX_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxCount();
+      }
+      if (hasResolveLinkTos()) {
+        hash = (37 * hash) + RESOLVE_LINK_TOS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getResolveLinkTos());
+      }
+      if (hasRequireMaster()) {
+        hash = (37 * hash) + REQUIRE_MASTER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getRequireMaster());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.ReadAllEvents parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -16909,6 +13559,99 @@ public final class ClientMessage {
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.ReadAllEventsCompleted)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.ReadAllEventsCompleted other = (com.jen20.client.internal.ClientMessage.ReadAllEventsCompleted) obj;
+
+      boolean result = true;
+      result = result && (hasCommitPosition() == other.hasCommitPosition());
+      if (hasCommitPosition()) {
+        result = result && (getCommitPosition()
+            == other.getCommitPosition());
+      }
+      result = result && (hasPreparePosition() == other.hasPreparePosition());
+      if (hasPreparePosition()) {
+        result = result && (getPreparePosition()
+            == other.getPreparePosition());
+      }
+      result = result && getEventsList()
+          .equals(other.getEventsList());
+      result = result && (hasNextCommitPosition() == other.hasNextCommitPosition());
+      if (hasNextCommitPosition()) {
+        result = result && (getNextCommitPosition()
+            == other.getNextCommitPosition());
+      }
+      result = result && (hasNextPreparePosition() == other.hasNextPreparePosition());
+      if (hasNextPreparePosition()) {
+        result = result && (getNextPreparePosition()
+            == other.getNextPreparePosition());
+      }
+      result = result && (hasResult() == other.hasResult());
+      if (hasResult()) {
+        result = result &&
+            (getResult() == other.getResult());
+      }
+      result = result && (hasError() == other.hasError());
+      if (hasError()) {
+        result = result && getError()
+            .equals(other.getError());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasCommitPosition()) {
+        hash = (37 * hash) + COMMIT_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCommitPosition());
+      }
+      if (hasPreparePosition()) {
+        hash = (37 * hash) + PREPARE_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPreparePosition());
+      }
+      if (getEventsCount() > 0) {
+        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventsList().hashCode();
+      }
+      if (hasNextCommitPosition()) {
+        hash = (37 * hash) + NEXT_COMMIT_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNextCommitPosition());
+      }
+      if (hasNextPreparePosition()) {
+        hash = (37 * hash) + NEXT_PREPARE_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNextPreparePosition());
+      }
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashEnum(
+            getResult());
+      }
+      if (hasError()) {
+        hash = (37 * hash) + ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getError().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.jen20.client.internal.ClientMessage.ReadAllEventsCompleted parseFrom(
@@ -17944,6 +14687,53 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.SubscribeToStream)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.SubscribeToStream other = (com.jen20.client.internal.ClientMessage.SubscribeToStream) obj;
+
+      boolean result = true;
+      result = result && (hasEventStreamId() == other.hasEventStreamId());
+      if (hasEventStreamId()) {
+        result = result && getEventStreamId()
+            .equals(other.getEventStreamId());
+      }
+      result = result && (hasResolveLinkTos() == other.hasResolveLinkTos());
+      if (hasResolveLinkTos()) {
+        result = result && (getResolveLinkTos()
+            == other.getResolveLinkTos());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEventStreamId()) {
+        hash = (37 * hash) + EVENT_STREAM_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getEventStreamId().hashCode();
+      }
+      if (hasResolveLinkTos()) {
+        hash = (37 * hash) + RESOLVE_LINK_TOS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getResolveLinkTos());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.SubscribeToStream parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -18477,6 +15267,53 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.SubscriptionConfirmation)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.SubscriptionConfirmation other = (com.jen20.client.internal.ClientMessage.SubscriptionConfirmation) obj;
+
+      boolean result = true;
+      result = result && (hasLastCommitPosition() == other.hasLastCommitPosition());
+      if (hasLastCommitPosition()) {
+        result = result && (getLastCommitPosition()
+            == other.getLastCommitPosition());
+      }
+      result = result && (hasLastEventNumber() == other.hasLastEventNumber());
+      if (hasLastEventNumber()) {
+        result = result && (getLastEventNumber()
+            == other.getLastEventNumber());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasLastCommitPosition()) {
+        hash = (37 * hash) + LAST_COMMIT_POSITION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getLastCommitPosition());
+      }
+      if (hasLastEventNumber()) {
+        hash = (37 * hash) + LAST_EVENT_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getLastEventNumber();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.SubscriptionConfirmation parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -18945,6 +15782,43 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.StreamEventAppeared)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.StreamEventAppeared other = (com.jen20.client.internal.ClientMessage.StreamEventAppeared) obj;
+
+      boolean result = true;
+      result = result && (hasEvent() == other.hasEvent());
+      if (hasEvent()) {
+        result = result && getEvent()
+            .equals(other.getEvent());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasEvent()) {
+        hash = (37 * hash) + EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEvent().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.StreamEventAppeared parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -19404,6 +16278,34 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.UnsubscribeFromStream)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.UnsubscribeFromStream other = (com.jen20.client.internal.ClientMessage.UnsubscribeFromStream) obj;
+
+      boolean result = true;
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.UnsubscribeFromStream parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -19842,6 +16744,44 @@ public final class ClientMessage {
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.SubscriptionDropped)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.SubscriptionDropped other = (com.jen20.client.internal.ClientMessage.SubscriptionDropped) obj;
+
+      boolean result = true;
+      result = result && (hasReason() == other.hasReason());
+      if (hasReason()) {
+        result = result &&
+            (getReason() == other.getReason());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasReason()) {
+        hash = (37 * hash) + REASON_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashEnum(
+            getReason());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.jen20.client.internal.ClientMessage.SubscriptionDropped parseFrom(
@@ -20764,6 +17704,88 @@ public final class ClientMessage {
         return super.writeReplace();
       }
 
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.jen20.client.internal.ClientMessage.NotHandled.MasterInfo)) {
+          return super.equals(obj);
+        }
+        com.jen20.client.internal.ClientMessage.NotHandled.MasterInfo other = (com.jen20.client.internal.ClientMessage.NotHandled.MasterInfo) obj;
+
+        boolean result = true;
+        result = result && (hasExternalTcpAddress() == other.hasExternalTcpAddress());
+        if (hasExternalTcpAddress()) {
+          result = result && getExternalTcpAddress()
+              .equals(other.getExternalTcpAddress());
+        }
+        result = result && (hasExternalTcpPort() == other.hasExternalTcpPort());
+        if (hasExternalTcpPort()) {
+          result = result && (getExternalTcpPort()
+              == other.getExternalTcpPort());
+        }
+        result = result && (hasExternalHttpAddress() == other.hasExternalHttpAddress());
+        if (hasExternalHttpAddress()) {
+          result = result && getExternalHttpAddress()
+              .equals(other.getExternalHttpAddress());
+        }
+        result = result && (hasExternalHttpPort() == other.hasExternalHttpPort());
+        if (hasExternalHttpPort()) {
+          result = result && (getExternalHttpPort()
+              == other.getExternalHttpPort());
+        }
+        result = result && (hasExternalSecureTcpAddress() == other.hasExternalSecureTcpAddress());
+        if (hasExternalSecureTcpAddress()) {
+          result = result && getExternalSecureTcpAddress()
+              .equals(other.getExternalSecureTcpAddress());
+        }
+        result = result && (hasExternalSecureTcpPort() == other.hasExternalSecureTcpPort());
+        if (hasExternalSecureTcpPort()) {
+          result = result && (getExternalSecureTcpPort()
+              == other.getExternalSecureTcpPort());
+        }
+        result = result &&
+            getUnknownFields().equals(other.getUnknownFields());
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptorForType().hashCode();
+        if (hasExternalTcpAddress()) {
+          hash = (37 * hash) + EXTERNAL_TCP_ADDRESS_FIELD_NUMBER;
+          hash = (53 * hash) + getExternalTcpAddress().hashCode();
+        }
+        if (hasExternalTcpPort()) {
+          hash = (37 * hash) + EXTERNAL_TCP_PORT_FIELD_NUMBER;
+          hash = (53 * hash) + getExternalTcpPort();
+        }
+        if (hasExternalHttpAddress()) {
+          hash = (37 * hash) + EXTERNAL_HTTP_ADDRESS_FIELD_NUMBER;
+          hash = (53 * hash) + getExternalHttpAddress().hashCode();
+        }
+        if (hasExternalHttpPort()) {
+          hash = (37 * hash) + EXTERNAL_HTTP_PORT_FIELD_NUMBER;
+          hash = (53 * hash) + getExternalHttpPort();
+        }
+        if (hasExternalSecureTcpAddress()) {
+          hash = (37 * hash) + EXTERNAL_SECURE_TCP_ADDRESS_FIELD_NUMBER;
+          hash = (53 * hash) + getExternalSecureTcpAddress().hashCode();
+        }
+        if (hasExternalSecureTcpPort()) {
+          hash = (37 * hash) + EXTERNAL_SECURE_TCP_PORT_FIELD_NUMBER;
+          hash = (53 * hash) + getExternalSecureTcpPort();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
       public static com.jen20.client.internal.ClientMessage.NotHandled.MasterInfo parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -21438,6 +18460,53 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.NotHandled)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.NotHandled other = (com.jen20.client.internal.ClientMessage.NotHandled) obj;
+
+      boolean result = true;
+      result = result && (hasReason() == other.hasReason());
+      if (hasReason()) {
+        result = result &&
+            (getReason() == other.getReason());
+      }
+      result = result && (hasAdditionalInfo() == other.hasAdditionalInfo());
+      if (hasAdditionalInfo()) {
+        result = result && getAdditionalInfo()
+            .equals(other.getAdditionalInfo());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasReason()) {
+        hash = (37 * hash) + REASON_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashEnum(
+            getReason());
+      }
+      if (hasAdditionalInfo()) {
+        hash = (37 * hash) + ADDITIONAL_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getAdditionalInfo().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.NotHandled parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -21845,6 +18914,34 @@ public final class ClientMessage {
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.ScavengeDatabase)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.ScavengeDatabase other = (com.jen20.client.internal.ClientMessage.ScavengeDatabase) obj;
+
+      boolean result = true;
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
     }
 
     public static com.jen20.client.internal.ClientMessage.ScavengeDatabase parseFrom(
@@ -22452,6 +19549,72 @@ public final class ClientMessage {
       return super.writeReplace();
     }
 
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jen20.client.internal.ClientMessage.ScavengeDatabaseCompleted)) {
+        return super.equals(obj);
+      }
+      com.jen20.client.internal.ClientMessage.ScavengeDatabaseCompleted other = (com.jen20.client.internal.ClientMessage.ScavengeDatabaseCompleted) obj;
+
+      boolean result = true;
+      result = result && (hasResult() == other.hasResult());
+      if (hasResult()) {
+        result = result &&
+            (getResult() == other.getResult());
+      }
+      result = result && (hasError() == other.hasError());
+      if (hasError()) {
+        result = result && getError()
+            .equals(other.getError());
+      }
+      result = result && (hasTotalTimeMs() == other.hasTotalTimeMs());
+      if (hasTotalTimeMs()) {
+        result = result && (getTotalTimeMs()
+            == other.getTotalTimeMs());
+      }
+      result = result && (hasTotalSpaceSaved() == other.hasTotalSpaceSaved());
+      if (hasTotalSpaceSaved()) {
+        result = result && (getTotalSpaceSaved()
+            == other.getTotalSpaceSaved());
+      }
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashEnum(
+            getResult());
+      }
+      if (hasError()) {
+        hash = (37 * hash) + ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getError().hashCode();
+      }
+      if (hasTotalTimeMs()) {
+        hash = (37 * hash) + TOTAL_TIME_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalTimeMs();
+      }
+      if (hasTotalSpaceSaved()) {
+        hash = (37 * hash) + TOTAL_SPACE_SAVED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTotalSpaceSaved());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
     public static com.jen20.client.internal.ClientMessage.ScavengeDatabaseCompleted parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -22905,36 +20068,6 @@ public final class ClientMessage {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_EventStore_Client_Messages_DeleteStreamCompleted_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EventStore_Client_Messages_TransactionStart_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_EventStore_Client_Messages_TransactionStart_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EventStore_Client_Messages_TransactionStartCompleted_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_EventStore_Client_Messages_TransactionStartCompleted_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EventStore_Client_Messages_TransactionWrite_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_EventStore_Client_Messages_TransactionWrite_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EventStore_Client_Messages_TransactionWriteCompleted_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_EventStore_Client_Messages_TransactionWriteCompleted_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EventStore_Client_Messages_TransactionCommit_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_EventStore_Client_Messages_TransactionCommit_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_EventStore_Client_Messages_TransactionCommitCompleted_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_EventStore_Client_Messages_TransactionCommitCompleted_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_EventStore_Client_Messages_ReadEvent_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -23052,96 +20185,77 @@ public final class ClientMessage {
       "result\030\001 \002(\0162+.EventStore.Client.Message" +
       "s.OperationResult\022\017\n\007message\030\002 \001(\t\022\030\n\020pr" +
       "epare_position\030\003 \001(\003\022\027\n\017commit_position\030" +
-      "\004 \001(\003\"]\n\020TransactionStart\022\027\n\017event_strea" +
-      "m_id\030\001 \002(\t\022\030\n\020expected_version\030\002 \002(\005\022\026\n\016" +
-      "require_master\030\003 \002(\010\"\201\001\n\031TransactionStar" +
-      "tCompleted\022\026\n\016transaction_id\030\001 \002(\003\022;\n\006re" +
-      "sult\030\002 \002(\0162+.EventStore.Client.Messages." +
-      "OperationResult\022\017\n\007message\030\003 \001(\t\"x\n\020Tran",
-      "sactionWrite\022\026\n\016transaction_id\030\001 \002(\003\0224\n\006" +
-      "events\030\002 \003(\0132$.EventStore.Client.Message" +
-      "s.NewEvent\022\026\n\016require_master\030\003 \002(\010\"\201\001\n\031T" +
-      "ransactionWriteCompleted\022\026\n\016transaction_" +
-      "id\030\001 \002(\003\022;\n\006result\030\002 \002(\0162+.EventStore.Cl" +
-      "ient.Messages.OperationResult\022\017\n\007message" +
-      "\030\003 \001(\t\"C\n\021TransactionCommit\022\026\n\016transacti" +
-      "on_id\030\001 \002(\003\022\026\n\016require_master\030\002 \002(\010\"\354\001\n\032" +
-      "TransactionCommitCompleted\022\026\n\016transactio" +
-      "n_id\030\001 \002(\003\022;\n\006result\030\002 \002(\0162+.EventStore.",
-      "Client.Messages.OperationResult\022\017\n\007messa" +
-      "ge\030\003 \001(\t\022\032\n\022first_event_number\030\004 \002(\005\022\031\n\021" +
-      "last_event_number\030\005 \002(\005\022\030\n\020prepare_posit" +
-      "ion\030\006 \001(\003\022\027\n\017commit_position\030\007 \001(\003\"l\n\tRe" +
-      "adEvent\022\027\n\017event_stream_id\030\001 \002(\t\022\024\n\014even" +
-      "t_number\030\002 \002(\005\022\030\n\020resolve_link_tos\030\003 \002(\010" +
-      "\022\026\n\016require_master\030\004 \002(\010\"\240\002\n\022ReadEventCo" +
-      "mpleted\022N\n\006result\030\001 \002(\0162>.EventStore.Cli" +
-      "ent.Messages.ReadEventCompleted.ReadEven" +
-      "tResult\022?\n\005event\030\002 \002(\01320.EventStore.Clie",
-      "nt.Messages.ResolvedIndexedEvent\022\r\n\005erro" +
-      "r\030\003 \001(\t\"j\n\017ReadEventResult\022\013\n\007Success\020\000\022" +
-      "\014\n\010NotFound\020\001\022\014\n\010NoStream\020\002\022\021\n\rStreamDel" +
-      "eted\020\003\022\t\n\005Error\020\004\022\020\n\014AccessDenied\020\005\"\213\001\n\020" +
-      "ReadStreamEvents\022\027\n\017event_stream_id\030\001 \002(" +
-      "\t\022\031\n\021from_event_number\030\002 \002(\005\022\021\n\tmax_coun" +
-      "t\030\003 \002(\005\022\030\n\020resolve_link_tos\030\004 \002(\010\022\026\n\016req" +
-      "uire_master\030\005 \002(\010\"\242\003\n\031ReadStreamEventsCo" +
-      "mpleted\022@\n\006events\030\001 \003(\01320.EventStore.Cli" +
-      "ent.Messages.ResolvedIndexedEvent\022V\n\006res",
-      "ult\030\002 \002(\0162F.EventStore.Client.Messages.R" +
-      "eadStreamEventsCompleted.ReadStreamResul" +
-      "t\022\031\n\021next_event_number\030\003 \002(\005\022\031\n\021last_eve" +
-      "nt_number\030\004 \002(\005\022\030\n\020is_end_of_stream\030\005 \002(" +
-      "\010\022\034\n\024last_commit_position\030\006 \002(\003\022\r\n\005error" +
-      "\030\007 \001(\t\"n\n\020ReadStreamResult\022\013\n\007Success\020\000\022" +
-      "\014\n\010NoStream\020\001\022\021\n\rStreamDeleted\020\002\022\017\n\013NotM" +
-      "odified\020\003\022\t\n\005Error\020\004\022\020\n\014AccessDenied\020\005\"\207" +
-      "\001\n\rReadAllEvents\022\027\n\017commit_position\030\001 \002(" +
-      "\003\022\030\n\020prepare_position\030\002 \002(\003\022\021\n\tmax_count",
-      "\030\003 \002(\005\022\030\n\020resolve_link_tos\030\004 \002(\010\022\026\n\016requ" +
-      "ire_master\030\005 \002(\010\"\371\002\n\026ReadAllEventsComple" +
-      "ted\022\027\n\017commit_position\030\001 \002(\003\022\030\n\020prepare_" +
-      "position\030\002 \002(\003\0229\n\006events\030\003 \003(\0132).EventSt" +
-      "ore.Client.Messages.ResolvedEvent\022\034\n\024nex" +
-      "t_commit_position\030\004 \002(\003\022\035\n\025next_prepare_" +
-      "position\030\005 \002(\003\022Y\n\006result\030\006 \001(\0162@.EventSt" +
-      "ore.Client.Messages.ReadAllEventsComplet" +
-      "ed.ReadAllResult:\007Success\022\r\n\005error\030\007 \001(\t" +
-      "\"J\n\rReadAllResult\022\013\n\007Success\020\000\022\017\n\013NotMod",
-      "ified\020\001\022\t\n\005Error\020\002\022\020\n\014AccessDenied\020\003\"F\n\021" +
-      "SubscribeToStream\022\027\n\017event_stream_id\030\001 \002" +
-      "(\t\022\030\n\020resolve_link_tos\030\002 \002(\010\"S\n\030Subscrip" +
-      "tionConfirmation\022\034\n\024last_commit_position" +
-      "\030\001 \002(\003\022\031\n\021last_event_number\030\002 \001(\005\"O\n\023Str" +
-      "eamEventAppeared\0228\n\005event\030\001 \002(\0132).EventS" +
-      "tore.Client.Messages.ResolvedEvent\"\027\n\025Un" +
-      "subscribeFromStream\"\271\001\n\023SubscriptionDrop" +
-      "ped\022d\n\006reason\030\001 \001(\0162F.EventStore.Client." +
-      "Messages.SubscriptionDropped.Subscriptio",
-      "nDropReason:\014Unsubscribed\"<\n\026Subscriptio" +
-      "nDropReason\022\020\n\014Unsubscribed\020\000\022\020\n\014AccessD" +
-      "enied\020\001\"\366\002\n\nNotHandled\022G\n\006reason\030\001 \002(\01627" +
-      ".EventStore.Client.Messages.NotHandled.N" +
-      "otHandledReason\022\027\n\017additional_info\030\002 \001(\014" +
-      "\032\307\001\n\nMasterInfo\022\034\n\024external_tcp_address\030" +
-      "\001 \002(\t\022\031\n\021external_tcp_port\030\002 \002(\005\022\035\n\025exte" +
-      "rnal_http_address\030\003 \002(\t\022\032\n\022external_http" +
-      "_port\030\004 \002(\005\022#\n\033external_secure_tcp_addre" +
-      "ss\030\005 \001(\t\022 \n\030external_secure_tcp_port\030\006 \001",
-      "(\005\"<\n\020NotHandledReason\022\014\n\010NotReady\020\000\022\013\n\007" +
-      "TooBusy\020\001\022\r\n\tNotMaster\020\002\"\022\n\020ScavengeData" +
-      "base\"\355\001\n\031ScavengeDatabaseCompleted\022T\n\006re" +
-      "sult\030\001 \002(\0162D.EventStore.Client.Messages." +
-      "ScavengeDatabaseCompleted.ScavengeResult" +
-      "\022\r\n\005error\030\002 \001(\t\022\025\n\rtotal_time_ms\030\003 \002(\005\022\031" +
-      "\n\021total_space_saved\030\004 \002(\003\"9\n\016ScavengeRes" +
-      "ult\022\013\n\007Success\020\000\022\016\n\nInProgress\020\001\022\n\n\006Fail" +
-      "ed\020\002*\260\001\n\017OperationResult\022\013\n\007Success\020\000\022\022\n" +
-      "\016PrepareTimeout\020\001\022\021\n\rCommitTimeout\020\002\022\022\n\016",
-      "ForwardTimeout\020\003\022\030\n\024WrongExpectedVersion" +
-      "\020\004\022\021\n\rStreamDeleted\020\005\022\026\n\022InvalidTransact" +
-      "ion\020\006\022\020\n\014AccessDenied\020\007B*\n\031com.jen20.cli" +
-      "ent.internalB\rClientMessage"
+      "\004 \001(\003\"l\n\tReadEvent\022\027\n\017event_stream_id\030\001 " +
+      "\002(\t\022\024\n\014event_number\030\002 \002(\005\022\030\n\020resolve_lin" +
+      "k_tos\030\003 \002(\010\022\026\n\016require_master\030\004 \002(\010\"\240\002\n\022" +
+      "ReadEventCompleted\022N\n\006result\030\001 \002(\0162>.Eve" +
+      "ntStore.Client.Messages.ReadEventComplet" +
+      "ed.ReadEventResult\022?\n\005event\030\002 \002(\01320.Even",
+      "tStore.Client.Messages.ResolvedIndexedEv" +
+      "ent\022\r\n\005error\030\003 \001(\t\"j\n\017ReadEventResult\022\013\n" +
+      "\007Success\020\000\022\014\n\010NotFound\020\001\022\014\n\010NoStream\020\002\022\021" +
+      "\n\rStreamDeleted\020\003\022\t\n\005Error\020\004\022\020\n\014AccessDe" +
+      "nied\020\005\"\213\001\n\020ReadStreamEvents\022\027\n\017event_str" +
+      "eam_id\030\001 \002(\t\022\031\n\021from_event_number\030\002 \002(\005\022" +
+      "\021\n\tmax_count\030\003 \002(\005\022\030\n\020resolve_link_tos\030\004" +
+      " \002(\010\022\026\n\016require_master\030\005 \002(\010\"\242\003\n\031ReadStr" +
+      "eamEventsCompleted\022@\n\006events\030\001 \003(\01320.Eve" +
+      "ntStore.Client.Messages.ResolvedIndexedE",
+      "vent\022V\n\006result\030\002 \002(\0162F.EventStore.Client" +
+      ".Messages.ReadStreamEventsCompleted.Read" +
+      "StreamResult\022\031\n\021next_event_number\030\003 \002(\005\022" +
+      "\031\n\021last_event_number\030\004 \002(\005\022\030\n\020is_end_of_" +
+      "stream\030\005 \002(\010\022\034\n\024last_commit_position\030\006 \002" +
+      "(\003\022\r\n\005error\030\007 \001(\t\"n\n\020ReadStreamResult\022\013\n" +
+      "\007Success\020\000\022\014\n\010NoStream\020\001\022\021\n\rStreamDelete" +
+      "d\020\002\022\017\n\013NotModified\020\003\022\t\n\005Error\020\004\022\020\n\014Acces" +
+      "sDenied\020\005\"\207\001\n\rReadAllEvents\022\027\n\017commit_po" +
+      "sition\030\001 \002(\003\022\030\n\020prepare_position\030\002 \002(\003\022\021",
+      "\n\tmax_count\030\003 \002(\005\022\030\n\020resolve_link_tos\030\004 " +
+      "\002(\010\022\026\n\016require_master\030\005 \002(\010\"\371\002\n\026ReadAllE" +
+      "ventsCompleted\022\027\n\017commit_position\030\001 \002(\003\022" +
+      "\030\n\020prepare_position\030\002 \002(\003\0229\n\006events\030\003 \003(" +
+      "\0132).EventStore.Client.Messages.ResolvedE" +
+      "vent\022\034\n\024next_commit_position\030\004 \002(\003\022\035\n\025ne" +
+      "xt_prepare_position\030\005 \002(\003\022Y\n\006result\030\006 \001(" +
+      "\0162@.EventStore.Client.Messages.ReadAllEv" +
+      "entsCompleted.ReadAllResult:\007Success\022\r\n\005" +
+      "error\030\007 \001(\t\"J\n\rReadAllResult\022\013\n\007Success\020",
+      "\000\022\017\n\013NotModified\020\001\022\t\n\005Error\020\002\022\020\n\014AccessD" +
+      "enied\020\003\"F\n\021SubscribeToStream\022\027\n\017event_st" +
+      "ream_id\030\001 \002(\t\022\030\n\020resolve_link_tos\030\002 \002(\010\"" +
+      "S\n\030SubscriptionConfirmation\022\034\n\024last_comm" +
+      "it_position\030\001 \002(\003\022\031\n\021last_event_number\030\002" +
+      " \001(\005\"O\n\023StreamEventAppeared\0228\n\005event\030\001 \002" +
+      "(\0132).EventStore.Client.Messages.Resolved" +
+      "Event\"\027\n\025UnsubscribeFromStream\"\271\001\n\023Subsc" +
+      "riptionDropped\022d\n\006reason\030\001 \001(\0162F.EventSt" +
+      "ore.Client.Messages.SubscriptionDropped.",
+      "SubscriptionDropReason:\014Unsubscribed\"<\n\026" +
+      "SubscriptionDropReason\022\020\n\014Unsubscribed\020\000" +
+      "\022\020\n\014AccessDenied\020\001\"\366\002\n\nNotHandled\022G\n\006rea" +
+      "son\030\001 \002(\01627.EventStore.Client.Messages.N" +
+      "otHandled.NotHandledReason\022\027\n\017additional" +
+      "_info\030\002 \001(\014\032\307\001\n\nMasterInfo\022\034\n\024external_t" +
+      "cp_address\030\001 \002(\t\022\031\n\021external_tcp_port\030\002 " +
+      "\002(\005\022\035\n\025external_http_address\030\003 \002(\t\022\032\n\022ex" +
+      "ternal_http_port\030\004 \002(\005\022#\n\033external_secur" +
+      "e_tcp_address\030\005 \001(\t\022 \n\030external_secure_t",
+      "cp_port\030\006 \001(\005\"<\n\020NotHandledReason\022\014\n\010Not" +
+      "Ready\020\000\022\013\n\007TooBusy\020\001\022\r\n\tNotMaster\020\002\"\022\n\020S" +
+      "cavengeDatabase\"\355\001\n\031ScavengeDatabaseComp" +
+      "leted\022T\n\006result\030\001 \002(\0162D.EventStore.Clien" +
+      "t.Messages.ScavengeDatabaseCompleted.Sca" +
+      "vengeResult\022\r\n\005error\030\002 \001(\t\022\025\n\rtotal_time" +
+      "_ms\030\003 \002(\005\022\031\n\021total_space_saved\030\004 \002(\003\"9\n\016" +
+      "ScavengeResult\022\013\n\007Success\020\000\022\016\n\nInProgres" +
+      "s\020\001\022\n\n\006Failed\020\002*\260\001\n\017OperationResult\022\013\n\007S" +
+      "uccess\020\000\022\022\n\016PrepareTimeout\020\001\022\021\n\rCommitTi",
+      "meout\020\002\022\022\n\016ForwardTimeout\020\003\022\030\n\024WrongExpe" +
+      "ctedVersion\020\004\022\021\n\rStreamDeleted\020\005\022\026\n\022Inva" +
+      "lidTransaction\020\006\022\020\n\014AccessDenied\020\007B-\n\031co" +
+      "m.jen20.client.internalB\rClientMessage\240\001" +
+      "\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -23203,110 +20317,74 @@ public final class ClientMessage {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_DeleteStreamCompleted_descriptor,
         new java.lang.String[] { "Result", "Message", "PreparePosition", "CommitPosition", });
-    internal_static_EventStore_Client_Messages_TransactionStart_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_EventStore_Client_Messages_TransactionStart_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_EventStore_Client_Messages_TransactionStart_descriptor,
-        new java.lang.String[] { "EventStreamId", "ExpectedVersion", "RequireMaster", });
-    internal_static_EventStore_Client_Messages_TransactionStartCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_EventStore_Client_Messages_TransactionStartCompleted_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_EventStore_Client_Messages_TransactionStartCompleted_descriptor,
-        new java.lang.String[] { "TransactionId", "Result", "Message", });
-    internal_static_EventStore_Client_Messages_TransactionWrite_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_EventStore_Client_Messages_TransactionWrite_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_EventStore_Client_Messages_TransactionWrite_descriptor,
-        new java.lang.String[] { "TransactionId", "Events", "RequireMaster", });
-    internal_static_EventStore_Client_Messages_TransactionWriteCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_EventStore_Client_Messages_TransactionWriteCompleted_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_EventStore_Client_Messages_TransactionWriteCompleted_descriptor,
-        new java.lang.String[] { "TransactionId", "Result", "Message", });
-    internal_static_EventStore_Client_Messages_TransactionCommit_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_EventStore_Client_Messages_TransactionCommit_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_EventStore_Client_Messages_TransactionCommit_descriptor,
-        new java.lang.String[] { "TransactionId", "RequireMaster", });
-    internal_static_EventStore_Client_Messages_TransactionCommitCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_EventStore_Client_Messages_TransactionCommitCompleted_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_EventStore_Client_Messages_TransactionCommitCompleted_descriptor,
-        new java.lang.String[] { "TransactionId", "Result", "Message", "FirstEventNumber", "LastEventNumber", "PreparePosition", "CommitPosition", });
     internal_static_EventStore_Client_Messages_ReadEvent_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_EventStore_Client_Messages_ReadEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_ReadEvent_descriptor,
         new java.lang.String[] { "EventStreamId", "EventNumber", "ResolveLinkTos", "RequireMaster", });
     internal_static_EventStore_Client_Messages_ReadEventCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_EventStore_Client_Messages_ReadEventCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_ReadEventCompleted_descriptor,
         new java.lang.String[] { "Result", "Event", "Error", });
     internal_static_EventStore_Client_Messages_ReadStreamEvents_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_EventStore_Client_Messages_ReadStreamEvents_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_ReadStreamEvents_descriptor,
         new java.lang.String[] { "EventStreamId", "FromEventNumber", "MaxCount", "ResolveLinkTos", "RequireMaster", });
     internal_static_EventStore_Client_Messages_ReadStreamEventsCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_EventStore_Client_Messages_ReadStreamEventsCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_ReadStreamEventsCompleted_descriptor,
         new java.lang.String[] { "Events", "Result", "NextEventNumber", "LastEventNumber", "IsEndOfStream", "LastCommitPosition", "Error", });
     internal_static_EventStore_Client_Messages_ReadAllEvents_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_EventStore_Client_Messages_ReadAllEvents_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_ReadAllEvents_descriptor,
         new java.lang.String[] { "CommitPosition", "PreparePosition", "MaxCount", "ResolveLinkTos", "RequireMaster", });
     internal_static_EventStore_Client_Messages_ReadAllEventsCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_EventStore_Client_Messages_ReadAllEventsCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_ReadAllEventsCompleted_descriptor,
         new java.lang.String[] { "CommitPosition", "PreparePosition", "Events", "NextCommitPosition", "NextPreparePosition", "Result", "Error", });
     internal_static_EventStore_Client_Messages_SubscribeToStream_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_EventStore_Client_Messages_SubscribeToStream_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_SubscribeToStream_descriptor,
         new java.lang.String[] { "EventStreamId", "ResolveLinkTos", });
     internal_static_EventStore_Client_Messages_SubscriptionConfirmation_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_EventStore_Client_Messages_SubscriptionConfirmation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_SubscriptionConfirmation_descriptor,
         new java.lang.String[] { "LastCommitPosition", "LastEventNumber", });
     internal_static_EventStore_Client_Messages_StreamEventAppeared_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_EventStore_Client_Messages_StreamEventAppeared_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_StreamEventAppeared_descriptor,
         new java.lang.String[] { "Event", });
     internal_static_EventStore_Client_Messages_UnsubscribeFromStream_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_EventStore_Client_Messages_UnsubscribeFromStream_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_UnsubscribeFromStream_descriptor,
         new java.lang.String[] { });
     internal_static_EventStore_Client_Messages_SubscriptionDropped_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_EventStore_Client_Messages_SubscriptionDropped_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_SubscriptionDropped_descriptor,
         new java.lang.String[] { "Reason", });
     internal_static_EventStore_Client_Messages_NotHandled_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_EventStore_Client_Messages_NotHandled_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_NotHandled_descriptor,
@@ -23318,13 +20396,13 @@ public final class ClientMessage {
         internal_static_EventStore_Client_Messages_NotHandled_MasterInfo_descriptor,
         new java.lang.String[] { "ExternalTcpAddress", "ExternalTcpPort", "ExternalHttpAddress", "ExternalHttpPort", "ExternalSecureTcpAddress", "ExternalSecureTcpPort", });
     internal_static_EventStore_Client_Messages_ScavengeDatabase_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_EventStore_Client_Messages_ScavengeDatabase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_ScavengeDatabase_descriptor,
         new java.lang.String[] { });
     internal_static_EventStore_Client_Messages_ScavengeDatabaseCompleted_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_EventStore_Client_Messages_ScavengeDatabaseCompleted_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_EventStore_Client_Messages_ScavengeDatabaseCompleted_descriptor,

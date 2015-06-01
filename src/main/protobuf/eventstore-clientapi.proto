@@ -2,10 +2,12 @@ package EventStore.Client.Messages;
 
 /* This proto matches the oss-v3.0.4 branch of Event Store Server,
    with the addition of the options below for Java package and umbrella
-   class name. */
+   class name, and the removal of messages for the unsupported
+   transactions feature. */
 
 option java_package = "com.jen20.client.internal";
 option java_outer_classname = "ClientMessage";
+option java_generate_equals_and_hash = true;
 
 enum OperationResult
 {
@@ -81,45 +83,6 @@ message DeleteStreamCompleted {
     optional string message = 2;
     optional int64 prepare_position = 3;
     optional int64 commit_position = 4;
-}
-
-message TransactionStart {
-    required string event_stream_id = 1;
-    required int32 expected_version = 2;
-    required bool require_master = 3;
-}
-
-message TransactionStartCompleted {
-    required int64 transaction_id = 1;
-    required OperationResult result = 2;
-    optional string message = 3;
-}
-
-message TransactionWrite {
-    required int64 transaction_id = 1;
-    repeated NewEvent events = 2;
-    required bool require_master = 3;
-}
-
-message TransactionWriteCompleted {
-    required int64 transaction_id = 1;
-    required OperationResult result = 2;
-    optional string message = 3;
-}
-
-message TransactionCommit {
-    required int64 transaction_id = 1;
-    required bool require_master = 2;
-}
-
-message TransactionCommitCompleted {
-    required int64 transaction_id = 1;
-    required OperationResult result = 2;
-    optional string message = 3;
-    required int32 first_event_number = 4;
-    required int32 last_event_number = 5;
-    optional int64 prepare_position = 6;
-    optional int64 commit_position = 7;
 }
 
 message ReadEvent {
