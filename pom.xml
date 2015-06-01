@@ -14,10 +14,12 @@
         <slf4j.version>1.7.12</slf4j.version>
         <netty.version>4.0.28.Final</netty.version>
         <junit.version>4.11</junit.version>
+        <protobuf.version>2.6.1</protobuf.version>
 
         <!-- Maven plugin versions -->
         <source.version>2.4</source.version>
         <javadoc.version>2.10.3</javadoc.version>
+        <protocjar.version>${protobuf.version}.4</protocjar.version>
     </properties>
 
     <dependencies>
@@ -32,6 +34,11 @@
             <version>${netty.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf.version}</version>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
@@ -41,6 +48,28 @@
     
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.github.os72</groupId>
+                <artifactId>protoc-jar-maven-plugin</artifactId>
+                <version>${protocjar.version}</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <includeDirectories>
+                                <include>src/main/protobuf</include>
+                            </includeDirectories>
+                            <inputDirectories>
+                                <include>src/main/protobuf</include>
+                            </inputDirectories>
+                            <outputDirectory>src/main/java</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -64,6 +93,9 @@
                         <goals>
                             <goal>jar</goal>
                         </goals>
+                        <configuration>
+                            <additionalparam>-Xdoclint:none</additionalparam>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
