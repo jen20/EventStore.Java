@@ -20,6 +20,9 @@
         <source.version>2.4</source.version>
         <javadoc.version>2.10.3</javadoc.version>
         <protocjar.version>${protobuf.version}.4</protocjar.version>
+
+        <!-- Misc -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
