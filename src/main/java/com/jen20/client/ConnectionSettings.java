@@ -3,7 +3,8 @@ package com.jen20.client;
 import java.time.Duration;
 import java.util.Arrays;
 
-public class ConnectionSettings {
+class ConnectionSettings {
+    private final String connectionName;
     private final boolean verboseLogging;
     private final int maximumQueueDepth;
     private final int maximumConcurrentOperations;
@@ -19,6 +20,8 @@ public class ConnectionSettings {
     private final Duration heartbeatInterval;
     private final Duration heartbeatTimeout;
 
+    private final boolean discoverViaDNS;
+
     private final String clusterDNSName;
     private final int maximumDiscoveryAttempts;
     private final int externalGossipPort;
@@ -27,11 +30,7 @@ public class ConnectionSettings {
     private final Duration gossipTimeout;
     private final Duration connectionTimeout;
 
-    public static ConnectionSettingsBuilder newBuilder() {
-        return new ConnectionSettingsBuilder();
-    }
-
-    ConnectionSettings(boolean verboseLogging, int maximumQueueDepth, int maximumConcurrentOperations, int maximumRetries, int maximumReconnectionAttempts, boolean performOperationsOnlyOnMaster, Duration reconnectionDelay, Duration operationTimeout, Duration operationTimeoutFrequency, Credentials defaultCredentials, boolean failOnNoServerResponse, Duration heartbeatInterval, Duration heartbeatTimeout, String clusterDNSName, int maximumDiscoveryAttempts, int externalGossipPort, GossipSeed[] gossipSeeds, Duration gossipTimeout, Duration connectionTimeout) {
+    ConnectionSettings(String connectionName, boolean verboseLogging, int maximumQueueDepth, int maximumConcurrentOperations, int maximumRetries, int maximumReconnectionAttempts, boolean performOperationsOnlyOnMaster, Duration reconnectionDelay, Duration operationTimeout, Duration operationTimeoutFrequency, Credentials defaultCredentials, boolean failOnNoServerResponse, Duration heartbeatInterval, Duration heartbeatTimeout, boolean discoverViaDNS, String clusterDNSName, int maximumDiscoveryAttempts, int externalGossipPort, GossipSeed[] gossipSeeds, Duration gossipTimeout, Duration connectionTimeout) {
         if (maximumQueueDepth <= 0) {
             throw new IllegalArgumentException(String.format("maximumQueueDepth must be positive (supplied: %d)", maximumQueueDepth));
         }
@@ -45,6 +44,7 @@ public class ConnectionSettings {
             throw new IllegalArgumentException(String.format("maximumReconnectionAttempts must be -1 (unbounded), or >= 0 (bounded) (supplied: %d)", maximumReconnectionAttempts));
         }
 
+        this.connectionName = connectionName;
         this.verboseLogging = verboseLogging;
         this.maximumQueueDepth = maximumQueueDepth;
         this.maximumConcurrentOperations = maximumConcurrentOperations;
@@ -58,6 +58,7 @@ public class ConnectionSettings {
         this.failOnNoServerResponse = failOnNoServerResponse;
         this.heartbeatInterval = heartbeatInterval;
         this.heartbeatTimeout = heartbeatTimeout;
+        this.discoverViaDNS = discoverViaDNS;
         this.clusterDNSName = clusterDNSName;
         this.maximumDiscoveryAttempts = maximumDiscoveryAttempts;
         this.externalGossipPort = externalGossipPort;
@@ -165,5 +166,13 @@ public class ConnectionSettings {
 
     public Duration getConnectionTimeout() {
         return connectionTimeout;
+    }
+
+    public boolean isDiscoverViaDNS() {
+        return discoverViaDNS;
+    }
+
+    public String getConnectionName() {
+        return connectionName;
     }
 }
