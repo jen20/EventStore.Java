@@ -1,3 +1,6 @@
+
+<b>PROJECT STATUS: This will likely never be finished, as Mindaugas Šėmys has already build a Java client for Event Store, [available here](https://github.com/msemys/esjc).</b>
+
 # Event Store Java
 
 [![Build Status](https://travis-ci.org/jen20/EventStore.Java.svg?branch=master)](https://travis-ci.org/jen20/EventStore.Java)
